@@ -112,7 +112,7 @@ export function WaitlistForm() {
                 <Input
                   id="waitlist-email"
                   placeholder='Enter email'
-                  className='border-0 bg-transparent text-white text-sm sm:text-base placeholder:text-sm sm:placeholder:text-base placeholder:text-white/40 focus-visible:ring-0 focus-visible:ring-offset-0 pl-3 sm:pl-4 h-9 sm:h-10'
+                  className='border-0 bg-transparent text-white text-base placeholder:text-sm sm:placeholder:text-base placeholder:text-white/40 focus-visible:ring-0 focus-visible:ring-offset-0 pl-3 sm:pl-4 h-9 sm:h-10'
                   style={{ fontFamily: 'var(--font-inter)' }}
                   disabled={isSubmitting}
                   {...field}
