@@ -31,7 +31,7 @@ const Navbar = () => {
       className='fixed top-0 left-0 right-0 z-50'
     >
       <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%] h-[60px] mt-4 rounded-2xl bg-[#7FEC7F]/5 backdrop-blur-lg border border-[#7FEC7F]/10'>
-        <div className='flex items-center justify-between h-full pl-4 pr-2'>
+        <div className='grid grid-cols-2 md:grid-cols-3 items-center justify-between h-full pl-4 pr-2'>
           {/* Logo */}
           <div className='flex-shrink-0'>
             <Link href='/'>
@@ -58,12 +58,12 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Waitlist Button */}
-          <div className='hidden md:block'>
+          <div className='hidden md:flex justify-end'>
             <WaitlistButton />
           </div>
 
           {/* Mobile menu button */}
-          <div className='flex md:hidden relative'>
+          <div className='flex md:hidden relative justify-end'>
             <Button
               variant='default'
               size='icon'
