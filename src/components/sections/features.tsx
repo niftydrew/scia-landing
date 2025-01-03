@@ -44,7 +44,7 @@ export function Features() {
             <div className='overflow-hidden rounded-lg bg-accent/10 ring-1 ring-accent/10 lg:rounded-tr-[2rem]'>
               <Image
                 alt='Integrations illustration'
-                src='/assets/bento-02.jpg'
+                src='/assets/bento-03.png'
                 width={900}
                 height={600}
                 className='h-80 object-cover'
@@ -67,7 +67,7 @@ export function Features() {
             <div className='overflow-hidden rounded-lg bg-accent/10 ring-1 ring-accent/10 lg:rounded-bl-[2rem]'>
               <Image
                 alt='Integrations illustration'
-                src='/'
+                src='/assets/bento-03.png'
                 width={900}
                 height={600}
                 className='h-80 object-cover'
@@ -91,7 +91,7 @@ export function Features() {
             <div className='overflow-hidden rounded-lg bg-accent/10 ring-1 ring-accent/10 max-lg:rounded-b-[2rem] '>
               <Image
                 alt='Integrations illustration'
-                src='/'
+                src='/assets/bento-03.png'
                 width={900}
                 height={600}
                 className='h-80 object-cover'
@@ -115,7 +115,7 @@ export function Features() {
             <div className='overflow-hidden rounded-lg bg-accent/10 ring-1 ring-accent/10 max-lg:rounded-b-[2rem] lg:rounded-br-[2rem]'>
               <Image
                 alt='Integrations illustration'
-                src='/'
+                src='/assets/bento-03.png'
                 width={900}
                 height={600}
                 className='h-80 object-cover'
