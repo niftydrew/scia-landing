@@ -7,6 +7,26 @@ import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { SubmitButton } from './submit-button';
 import { useEffect, useState } from 'react';
+import { submitEmail } from '@/app/actions';
+import { useToast } from '@/hooks/use-toast';
+
+const TOAST_MESSAGES = {
+  success: {
+    title: "You're on the list!",
+    description: "We'll notify you when SCIA launches. Stay tuned!",
+  },
+  error: {
+    default: {
+      title: 'Something went wrong',
+      description: 'Please try again in a moment.',
+    },
+    duplicate: {
+      title: 'Already subscribed',
+      description:
+        "This email is already on our waitlist. We'll notify you when we launch!",
+    },
+  },
+} as const;
 
 const formSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
@@ -16,6 +36,9 @@ type FormValues = z.infer<typeof formSchema>;
 
 export function WaitlistForm() {
   const [showSubmit, setShowSubmit] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -24,7 +47,6 @@ export function WaitlistForm() {
     mode: 'onChange',
   });
 
-  // Watch for valid email changes
   useEffect(() => {
     const subscription = form.watch((value, { name }) => {
       if (name === 'email') {
@@ -39,16 +61,47 @@ export function WaitlistForm() {
     return () => subscription.unsubscribe();
   }, [form]);
 
-  function onSubmit(data: FormValues) {
-    // Handle form submission
-    console.log(data);
+  async function onSubmit(data: FormValues) {
+    try {
+      setIsSubmitting(true);
+      const result = await submitEmail(data.email);
+
+      if (result.success) {
+        toast({
+          ...TOAST_MESSAGES.success,
+          variant: 'default',
+          className: 'bg-[#7FEC7F]/10 backdrop-blur-sm border-[#7FEC7F]/10',
+          duration: 5000,
+        });
+        form.reset();
+        setShowSubmit(false);
+      } else {
+        toast({
+          ...(result.error === 'duplicate'
+            ? TOAST_MESSAGES.error.duplicate
+            : TOAST_MESSAGES.error.default),
+          variant: 'destructive',
+          className: 'backdrop-blur-sm',
+          duration: 5000,
+        });
+      }
+    } catch {
+      toast({
+        ...TOAST_MESSAGES.error.default,
+        variant: 'destructive',
+        className: 'backdrop-blur-sm',
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='flex items-center gap-2 p-1.5 rounded-xl bg-[#7FEC7F]/5 border border-[#7FEC7F]/10 backdrop-blur-sm w-full max-w-[400px] relative overflow-hidden focus-within:border-[#7FEC7F] transition-colors duration-200'
+        className='flex items-center gap-2 p-1.5 rounded-xl bg-[#7FEC7F]/5 border border-[#7FEC7F]/10 backdrop-blur-sm w-full max-w-[400px] relative overflow-hidden'
       >
         <FormField
           control={form.control}
@@ -58,8 +111,9 @@ export function WaitlistForm() {
               <FormControl>
                 <Input
                   placeholder='Enter email'
-                  className='border-0 bg-transparent text-white !text-base placeholder:text-base placeholder:text-white/40 focus-visible:ring-0 focus-visible:ring-offset-0 pl-4 autofill:bg-transparent autofill:text-white [-webkit-autofill:active]:!bg-transparent [-webkit-autofill:hover]:!bg-transparent [-webkit-autofill:focus]:!bg-transparent [-webkit-autofill]:!bg-transparent [-webkit-autofill]:shadow-[inset_0_0_0px_1000px_rgb(0,0,0)] [-webkit-autofill]:!text-white'
+                  className='border-0 bg-transparent text-white !text-base placeholder:text-base placeholder:text-white/40 focus-visible:ring-0 focus-visible:ring-offset-0 pl-4'
                   style={{ fontFamily: 'var(--font-inter)' }}
+                  disabled={isSubmitting}
                   {...field}
                 />
               </FormControl>
@@ -73,7 +127,7 @@ export function WaitlistForm() {
               : 'translate-x-full opacity-0'
           }`}
         >
-          <SubmitButton />
+          <SubmitButton loading={isSubmitting} />
         </div>
       </form>
     </Form>

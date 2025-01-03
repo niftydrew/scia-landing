@@ -6,6 +6,8 @@ import Navbar from '@/components/features/navbar';
 import { VideoBackground } from '@/components/features/video-background';
 import { StickyNavbar } from '@/components/features/sticky-navbar';
 
+import { Toaster } from '@/components/ui/toaster';
+
 const circular = localFont({
   src: [
     {
@@ -48,13 +50,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${circular.className} ${inter.variable} min-h-screen bg-[#000803] text-white`}>
+      <body
+        className={`${circular.className} ${inter.variable} min-h-screen bg-[#000803] text-white`}
+      >
         <div className='relative'>
           <VideoBackground />
           <Navbar />
           <StickyNavbar />
           <main className='relative'>{children}</main>
         </div>
+        <Toaster />
       </body>
     </html>
   );
