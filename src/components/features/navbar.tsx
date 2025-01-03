@@ -18,7 +18,7 @@ const navigationItems = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { scrollY } = useScroll();
-  
+
   const opacity = useTransform(scrollY, [0, 60], [1, 0]);
   const translateY = useTransform(scrollY, [0, 60], [0, -20]);
 
@@ -85,13 +85,13 @@ const Navbar = () => {
                     <NavLink
                       key={item.href}
                       href={item.href}
-                      className='block px-3 py-2 text-sm hover:bg-[#7FEC7F]/10 rounded-lg transition-colors'
+                      className='block px-3 py-2 hover:bg-[#7FEC7F]/10 rounded-lg transition-colors'
                     >
                       {item.label}
                     </NavLink>
                   ))}
                   <div className='pt-1'>
-                    <WaitlistButton className='justify-center text-sm ' />
+                    <WaitlistButton className='justify-center' />
                   </div>
                 </div>
               </div>

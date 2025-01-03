@@ -41,7 +41,7 @@ export function Hero() {
         </motion.div>
         <motion.h1
           variants={itemVariants}
-          className='text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-normal mb-4 sm:mb-6 leading-[105%] tracking-tight text-center'
+          className='text-5xl md:text-6xl lg:text-[64px] font-normal mb-4 sm:mb-6 leading-[105%] tracking-tight text-center'
         >
           The first swarm of crypto intelligent trading agents
         </motion.h1>
