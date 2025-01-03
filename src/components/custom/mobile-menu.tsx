@@ -23,18 +23,18 @@ export function MobileMenu({ className }: MobileMenuProps) {
           <Button
             variant='default'
             size='icon'
-            className='bg-[#7FEC7F] w-10 h-10 text-black focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg hover:bg-[#7FEC7F] active:bg-[#7FEC7F] active:scale-100'
+            className='bg-sciaprimary w-10 h-10 text-black focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg hover:bg-sciaprimary active:bg-sciaprimary active:scale-100'
           >
             <Menu className='h-6 w-6' />
           </Button>
         </SheetTrigger>
         <SheetContent
           side='right'
-          className='w-[70%] bg-[#000803] border-[#7FEC7F]/10 flex flex-col'
+          className='w-[70%] bg-background border-sciaprimary/10 flex flex-col'
         >
           <SheetHeader className='mb-6'>
             <SheetTitle className='sr-only'>Navigation Menu</SheetTitle>
-            <div className='h-1.5 w-12 rounded-full bg-[#7FEC7F]/20 mx-auto' />
+            <div className='h-1.5 w-12 rounded-full bg-sciaprimary/20 mx-auto' />
           </SheetHeader>
           <div className='flex-1'>
             <div className='space-y-1'>
@@ -42,7 +42,7 @@ export function MobileMenu({ className }: MobileMenuProps) {
                 <NavLink
                   key={item.href}
                   href={item.href}
-                  className='block px-3 py-2 hover:bg-[#7FEC7F]/10 rounded-lg transition-colors'
+                  className='block px-3 py-2 hover:bg-sciaprimary/10 rounded-lg transition-colors'
                 >
                   {item.label}
                 </NavLink>

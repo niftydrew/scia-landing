@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import Navbar from '@/components/features/navbar';
 import { VideoBackground } from '@/components/features/video-background';
@@ -33,14 +32,15 @@ const circular = localFont({
   ],
 });
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-});
-
 export const metadata: Metadata = {
   title: 'Scia',
   description: 'Smart Crypto Intelligent Agents',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 };
 
 export default function RootLayout({
@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${circular.className} ${inter.variable} min-h-screen bg-[#000803] text-white`}
+        className={`${circular.className} min-h-screen bg-background text-foreground`}
       >
         <div className='relative'>
           <VideoBackground />

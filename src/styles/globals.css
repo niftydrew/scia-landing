@@ -5,14 +5,14 @@
 @keyframes pulse-scia {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(127, 236, 127, 0.7);
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
   }
-  
+
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 10px rgba(127, 236, 127, 0);
   }
-  
+
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(127, 236, 127, 0);
@@ -23,15 +23,11 @@
   animation: pulse-scia 2s infinite;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
-    --scia-primary: 120, 74%, 71%;
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --scia-primary: 239 84% 67%;
+    --background: 225 9% 9%;
+    --foreground: 226 100% 94%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
@@ -42,7 +38,7 @@ body {
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
+    --accent: 230 94% 82%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -56,33 +52,6 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
-  .dark {
-    --scia-primary: 120, 74%, 71%;
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
 }
 
 @layer base {
@@ -92,47 +61,5 @@ body {
 
   body {
     @apply antialiased bg-background text-foreground scroll-smooth;
-  }
-
-  ::selection {
-    @apply bg-primary text-background;
-  }
-
-  input::selection {
-    background-color: #7FEC7F;
-    color: #06150A;
-  }
-
-  input::-moz-selection {
-    background-color: #7FEC7F;
-    color: #06150A;
-  }
-
-  ::-webkit-scrollbar {
-    @apply w-2 h-2;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-muted;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-muted-foreground;
-  }
-
-  input:-webkit-autofill,
-  textarea:-webkit-autofill,
-  select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px #06150A inset !important;
-    box-shadow: 0 0 0 1000px #06150A inset !important;
-    -webkit-text-fill-color: white !important;
-    transition: background-color 0ms 9999999s, box-shadow 0ms 9999999s !important;
-  }
-
-  input:-webkit-autofill:not(:focus),
-  textarea:-webkit-autofill:not(:focus),
-  select:-webkit-autofill:not(:focus) {
-    -webkit-box-shadow: 0 0 0 1000px #06150A inset !important;
-    box-shadow: 0 0 0 1000px #06150A inset !important;
   }
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Image from 'next/image';
+import { Logo } from '@/components/ui/logo';
 import Link from 'next/link';
 import { WaitlistButton } from '@/components/custom/waitlist-button';
 import { NavLink } from '@/components/custom/nav-link';
@@ -14,7 +14,7 @@ export function StickyNavbar() {
   const headerBackgroundOpacity = useTransform(
     scrollY,
     [400, 500],
-    ['rgba(127, 236, 127, 0.05)', 'rgba(127, 236, 127, 0.05)']
+    ['rgba(0, 0, 0, 0.7)', 'rgba(0, 0, 0, 0.9)']
   );
 
   const opacity = useTransform(scrollY, [400, 500], [0, 1]);
@@ -27,19 +27,13 @@ export function StickyNavbar() {
         y: translateY,
         backgroundColor: headerBackgroundOpacity,
       }}
-      className='fixed top-0 left-0 right-0 z-40 border-b border-[#7FEC7F]/10 backdrop-blur-lg'
+      className='fixed top-0 left-0 right-0 z-40 border-b border-foreground/10 backdrop-blur-lg'
     >
       <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%] h-[60px] flex items-center justify-between px-4 pr-2'>
         {/* Logo */}
         <div className='flex-shrink-0'>
           <Link href='/'>
-            <Image
-              src='/brand/logo-dark.png'
-              alt='Scia Logo'
-              width={70}
-              height={36}
-              className='h-8 w-auto'
-            />
+            <Logo />
           </Link>
         </div>
 

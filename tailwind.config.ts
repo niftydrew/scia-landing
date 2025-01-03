@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        sciaPrimary: `hsl(var(--scia-primary))`,
+        sciaprimary: 'hsl(var(--scia-primary))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

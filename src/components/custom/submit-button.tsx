@@ -13,7 +13,7 @@ export function SubmitButton({ loading, className }: SubmitButtonProps) {
       variant='default'
       size='icon'
       disabled={loading}
-      className={`bg-[#7FEC7F] hover:bg-[#7FEC7F]/80 text-black rounded-lg ${className}`}
+      className={`bg-foreground hover:bg-foreground/80 text-black rounded-lg ${className}`}
     >
       {loading ? (
         <Loader2 className='h-4 w-4 animate-spin' />

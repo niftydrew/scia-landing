@@ -47,8 +47,7 @@ export function Hero() {
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className='text-base sm:text-lg leading-[150%] tracking-tight text-white/60 max-w-[600px] text-center mb-8 sm:mb-12'
-          style={{ fontFamily: 'var(--font-inter)' }}
+          className='text-base sm:text-lg leading-[150%] tracking-tight text-foreground/60 max-w-[600px] text-center mb-8 sm:mb-12'
         >
           Scia - Smart Crypto Intelligent Agents, is a multi-agent artificial
           intelligence system designed for cryptocurrency market analysis.

@@ -70,7 +70,7 @@ export function WaitlistForm() {
         toast({
           ...TOAST_MESSAGES.success,
           variant: 'default',
-          className: 'bg-[#7FEC7F]/10 backdrop-blur-sm border-[#7FEC7F]/10',
+          className: 'bg-sciaprimary/10 backdrop-blur-sm border-sciaprimary/10',
           duration: 5000,
         });
         form.reset();
@@ -101,7 +101,7 @@ export function WaitlistForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='flex items-center gap-2 p-1.5 rounded-xl bg-[#7FEC7F]/5 border border-[#7FEC7F]/10 backdrop-blur-sm w-full md:w-[400px] max-w-[500px] relative overflow-hidden focus-within:ring-2 focus-within:ring-[#7FEC7F]/50 focus-within:ring-offset-0 transition-all duration-200'
+        className='flex items-center gap-2 p-1.5 rounded-xl bg-accent/10 border border-accent/10 backdrop-blur-sm w-full md:w-[400px] max-w-[500px] relative overflow-hidden focus-within:ring-2 focus-within:ring-sciaprimary focus-within:ring-offset-0 transition-all duration-200'
       >
         <FormField
           control={form.control}
@@ -110,10 +110,9 @@ export function WaitlistForm() {
             <FormItem className='flex-1'>
               <FormControl>
                 <Input
-                  id="waitlist-email"
+                  id='waitlist-email'
                   placeholder='Enter email'
-                  className='border-0 bg-transparent text-white text-base placeholder:text-sm sm:placeholder:text-base placeholder:text-white/40 focus-visible:ring-0 focus-visible:ring-offset-0 pl-3 sm:pl-4 h-9 sm:h-10'
-                  style={{ fontFamily: 'var(--font-inter)' }}
+                  className='border-0 bg-transparent text-foreground text-base placeholder:text-sm sm:placeholder:text-base placeholder:text-foreground/40 focus-visible:ring-0 focus-visible:ring-offset-0 pl-3 sm:pl-4 h-9 sm:h-10'
                   disabled={isSubmitting}
                   {...field}
                 />
@@ -128,7 +127,10 @@ export function WaitlistForm() {
               : 'translate-x-full opacity-0'
           }`}
         >
-          <SubmitButton loading={isSubmitting} className="h-9 sm:h-10" />
+          <SubmitButton
+            loading={isSubmitting}
+            className='h-9 sm:h-10'
+          />
         </div>
       </form>
     </Form>
