@@ -101,7 +101,7 @@ export function WaitlistForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='flex items-center gap-2 p-1.5 rounded-xl bg-[#7FEC7F]/5 border border-[#7FEC7F]/10 backdrop-blur-sm w-full max-w-[400px] relative overflow-hidden'
+        className='flex items-center gap-2 p-1.5 rounded-xl bg-[#7FEC7F]/5 border border-[#7FEC7F]/10 backdrop-blur-sm w-full max-w-[400px] relative overflow-hidden focus-within:ring-2 focus-within:ring-[#7FEC7F]/50 focus-within:ring-offset-0 transition-all duration-200'
       >
         <FormField
           control={form.control}
@@ -110,6 +110,7 @@ export function WaitlistForm() {
             <FormItem className='flex-1'>
               <FormControl>
                 <Input
+                  id="waitlist-email"
                   placeholder='Enter email'
                   className='border-0 bg-transparent text-white !text-base placeholder:text-base placeholder:text-white/40 focus-visible:ring-0 focus-visible:ring-offset-0 pl-4'
                   style={{ fontFamily: 'var(--font-inter)' }}
