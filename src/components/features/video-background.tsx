@@ -1,0 +1,21 @@
+export function VideoBackground() {
+  return (
+    <>
+      <div className='absolute inset-0 h-[800px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#021A0C] via-[#021A0C]/50 to-transparent' />
+
+      {/* Video Background */}
+      <div className='absolute inset-0 h-[800px] overflow-hidden'>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className='w-full h-full object-cover opacity-20 mix-blend-luminosity'
+        >
+          <source src='/video/bg-video.mp4' type='video/mp4' />
+        </video>
+        <div className='absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent via-[#000803] to-[#000803]' />
+      </div>
+    </>
+  );
+}
