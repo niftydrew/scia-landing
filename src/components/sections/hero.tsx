@@ -29,7 +29,7 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className='min-h-[screen] h-[800px] flex flex-col justify-center items-center px-4 max-w-[800px] mx-auto'>
+    <section className='min-h-screen pt-32 sm:pt-40 pb-20 flex flex-col justify-center items-center px-4 max-w-[800px] mx-auto'>
       <motion.div
         className='flex flex-col max-w-[800px] items-center justify-center'
         variants={containerVariants}
@@ -37,17 +37,17 @@ export function Hero() {
         animate='visible'
       >
         <motion.div variants={itemVariants}>
-          <HeroBadge className='mb-8' />
+          <HeroBadge className='mb-6 sm:mb-8' />
         </motion.div>
         <motion.h1
           variants={itemVariants}
-          className='text-[64px] max-w-[800px] font-normal mb-6 leading-[105%] tracking-tight text-center'
+          className='text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-normal mb-4 sm:mb-6 leading-[105%] tracking-tight text-center'
         >
           The first swarm of crypto intelligent trading agents
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className='text-lg leading-[150%] tracking-tight text-white/60 max-w-[600px] text-center mb-12'
+          className='text-base sm:text-lg leading-[150%] tracking-tight text-white/60 max-w-[600px] text-center mb-8 sm:mb-12'
           style={{ fontFamily: 'var(--font-inter)' }}
         >
           Scia - Smart Crypto Intelligent Agents, is a multi-agent artificial
