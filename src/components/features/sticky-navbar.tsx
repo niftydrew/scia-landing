@@ -5,22 +5,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { WaitlistButton } from '@/components/custom/waitlist-button';
 import { NavLink } from '@/components/custom/nav-link';
-
-const navigationItems = [
-  { href: '/about', label: 'About' },
-  { href: '/features', label: 'Features' },
-  { href: '/docs', label: 'Docs' },
-];
+import { MobileMenu } from '@/components/custom/mobile-menu';
+import { navigationItems } from '@/config/navigation';
 
 export function StickyNavbar() {
   const { scrollY } = useScroll();
-  
+
   const headerBackgroundOpacity = useTransform(
     scrollY,
     [400, 500],
     ['rgba(127, 236, 127, 0.05)', 'rgba(127, 236, 127, 0.05)']
   );
-  
+
   const opacity = useTransform(scrollY, [400, 500], [0, 1]);
   const translateY = useTransform(scrollY, [400, 500], [-20, 0]);
 
@@ -31,35 +27,41 @@ export function StickyNavbar() {
         y: translateY,
         backgroundColor: headerBackgroundOpacity,
       }}
-      className="fixed top-0 left-0 right-0 z-40 border-b border-[#7FEC7F]/10 backdrop-blur-lg"
+      className='fixed top-0 left-0 right-0 z-40 border-b border-[#7FEC7F]/10 backdrop-blur-lg'
     >
-      <div className="mx-auto max-w-[1024px] h-[60px] flex items-center justify-between px-6">
+      <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%] h-[60px] flex items-center justify-between px-4 pr-2'>
         {/* Logo */}
-        <div className="flex-shrink-0">
-          <Link href="/">
+        <div className='flex-shrink-0'>
+          <Link href='/'>
             <Image
-              src="/brand/logo-dark.png"
-              alt="Scia Logo"
+              src='/brand/logo-dark.png'
+              alt='Scia Logo'
               width={70}
               height={36}
-              className="h-8 w-auto"
+              className='h-8 w-auto'
             />
           </Link>
         </div>
 
-        {/* Navigation */}
-        <div className="hidden md:flex items-center justify-center">
+        {/* Desktop Navigation */}
+        <div className='hidden md:flex items-center justify-center'>
           {navigationItems.map((item) => (
-            <NavLink key={item.href} href={item.href}>
+            <NavLink
+              key={item.href}
+              href={item.href}
+            >
               {item.label}
             </NavLink>
           ))}
         </div>
 
-        {/* Waitlist Button */}
-        <div className="hidden md:block">
+        {/* Desktop Waitlist Button */}
+        <div className='hidden md:flex justify-end'>
           <WaitlistButton />
         </div>
+
+        {/* Mobile Menu */}
+        <MobileMenu />
       </div>
     </motion.nav>
   );

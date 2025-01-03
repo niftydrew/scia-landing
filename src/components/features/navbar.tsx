@@ -1,22 +1,14 @@
 'use client';
 
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
 import { WaitlistButton } from '@/components/custom/waitlist-button';
 import { NavLink } from '@/components/custom/nav-link';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-
-const navigationItems = [
-  { href: '/about', label: 'About' },
-  { href: '/features', label: 'Features' },
-  { href: '/docs', label: 'Docs' },
-];
+import { MobileMenu } from '@/components/custom/mobile-menu';
+import { navigationItems } from '@/config/navigation';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { scrollY } = useScroll();
 
   const opacity = useTransform(scrollY, [0, 60], [1, 0]);
@@ -62,41 +54,8 @@ const Navbar = () => {
             <WaitlistButton />
           </div>
 
-          {/* Mobile menu button */}
-          <div className='flex md:hidden relative justify-end'>
-            <Button
-              variant='default'
-              size='icon'
-              className='bg-[#7FEC7F] w-10 h-10 text-black focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg hover:bg-[#7FEC7F] active:bg-[#7FEC7F] active:scale-100'
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? (
-                <X className='h-6 w-6' />
-              ) : (
-                <Menu className='h-6 w-6' />
-              )}
-            </Button>
-
-            {/* Mobile menu panel */}
-            {isMenuOpen && (
-              <div className='absolute top-[calc(100%+1rem)] right-[-0.5rem] w-fit rounded-xl bg-[#000803] backdrop-blur-lg border border-[#7FEC7F]/10 p-2 z-50'>
-                <div className='space-y-1'>
-                  {navigationItems.map((item) => (
-                    <NavLink
-                      key={item.href}
-                      href={item.href}
-                      className='block px-3 py-2 hover:bg-[#7FEC7F]/10 rounded-lg transition-colors'
-                    >
-                      {item.label}
-                    </NavLink>
-                  ))}
-                  <div className='pt-1'>
-                    <WaitlistButton className='justify-center' />
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
+          {/* Mobile Menu */}
+          <MobileMenu />
         </div>
       </div>
     </motion.nav>
