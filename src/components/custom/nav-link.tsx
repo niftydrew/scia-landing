@@ -9,6 +9,9 @@ interface NavLinkProps {
   isExternal?: boolean;
 }
 
+// Create a custom event for resetting nav links
+const RESET_NAV_EVENT = 'resetNavLinks';
+
 export function NavLink({
   href,
   children,
@@ -24,9 +27,20 @@ export function NavLink({
       }
     };
 
+    const handleReset = () => {
+      if (href.startsWith('#')) {
+        setIsActive(false);
+      }
+    };
+
     updateActive();
     window.addEventListener('hashchange', updateActive);
-    return () => window.removeEventListener('hashchange', updateActive);
+    window.addEventListener(RESET_NAV_EVENT, handleReset);
+
+    return () => {
+      window.removeEventListener('hashchange', updateActive);
+      window.removeEventListener(RESET_NAV_EVENT, handleReset);
+    };
   }, [href]);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -34,8 +48,10 @@ export function NavLink({
       e.preventDefault();
       const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-        window.location.hash = href;
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+          window.location.hash = href;
+        }, 500);
       }
     }
   };

@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Logo } from '@/components/ui/logo';
-import Link from 'next/link';
 import { WaitlistButton } from '@/components/custom/waitlist-button';
 import { NavLink } from '@/components/custom/nav-link';
 import { MobileMenu } from '@/components/custom/mobile-menu';
@@ -26,9 +25,18 @@ const Navbar = () => {
         <div className='grid grid-cols-2 md:grid-cols-4 items-center justify-between h-full pl-4 pr-2'>
           {/* Logo */}
           <div className='flex-shrink-0 col-span-1'>
-            <Link href='/'>
+            <a
+              href='/'
+              onClick={(e) => {
+                e.preventDefault();
+                window.history.replaceState(null, '', '/');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                // Wait for scroll to complete before reload
+                setTimeout(() => window.location.reload(), 500);
+              }}
+            >
               <Logo />
-            </Link>
+            </a>
           </div>
 
           {/* Desktop Navigation */}

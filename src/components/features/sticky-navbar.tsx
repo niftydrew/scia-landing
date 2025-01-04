@@ -2,11 +2,11 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Logo } from '@/components/ui/logo';
-import Link from 'next/link';
 import { WaitlistButton } from '@/components/custom/waitlist-button';
 import { NavLink } from '@/components/custom/nav-link';
 import { MobileMenu } from '@/components/custom/mobile-menu';
 import { navigationItems } from '@/config/navigation';
+import Link from 'next/link';
 
 export function StickyNavbar() {
   const { scrollY } = useScroll();
@@ -32,7 +32,16 @@ export function StickyNavbar() {
       <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%] h-[60px] flex items-center justify-between px-4 pr-2'>
         {/* Logo */}
         <div className='flex-shrink-0'>
-          <Link href='/'>
+          <Link
+            href='/'
+            onClick={(e) => {
+              e.preventDefault();
+              window.history.replaceState(null, '', '/');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              // Wait for scroll to complete before reload
+              setTimeout(() => window.location.reload(), 500);
+            }}
+          >
             <Logo />
           </Link>
         </div>
