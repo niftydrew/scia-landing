@@ -6,6 +6,7 @@ import { WaitlistButton } from '@/components/custom/waitlist-button';
 import { NavLink } from '@/components/custom/nav-link';
 import { MobileMenu } from '@/components/custom/mobile-menu';
 import { navigationItems } from '@/config/navigation';
+import Link from 'next/link';
 
 const Navbar = () => {
   const { scrollY } = useScroll();
@@ -25,7 +26,7 @@ const Navbar = () => {
         <div className='grid grid-cols-2 md:grid-cols-4 items-center justify-between h-full pl-4 pr-2'>
           {/* Logo */}
           <div className='flex-shrink-0 col-span-1'>
-            <a
+            <Link
               href='/'
               onClick={(e) => {
                 e.preventDefault();
@@ -36,7 +37,7 @@ const Navbar = () => {
               }}
             >
               <Logo />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
