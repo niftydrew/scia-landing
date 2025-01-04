@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Spline from '@splinetool/react-spline';
+import { useState } from 'react';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -14,8 +16,13 @@ const cardVariants = {
 };
 
 export function Features() {
+  const [splineLoaded, setSplineLoaded] = useState(false);
+
   return (
-    <div id="features" className='py-24 sm:py-32'>
+    <div
+      id='features'
+      className='py-24 sm:py-32'
+    >
       <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%]'>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -44,26 +51,23 @@ export function Features() {
             className='flex p-px lg:col-span-4'
           >
             <div className='flex flex-col overflow-hidden rounded-lg bg-accent/10 ring-1 ring-accent/10 max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem] w-full'>
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className='h-64 w-full object-cover flex-shrink-0'
-              >
-                <source
-                  src='/assets/illustration-02.mp4'
-                  type='video/mp4'
+              <div className='bg-black h-64 flex justify-start items-start relative'>
+                {!splineLoaded && (
+                  <div className="absolute inset-0 bg-accent/5 animate-pulse rounded-t-lg" />
+                )}
+                <Spline 
+                  scene='https://prod.spline.design/u752EVMdwPo2y2xm/scene.splinecode'
+                  onLoad={() => setSplineLoaded(true)}
                 />
-              </video>
+              </div>
               <div className='p-6'>
-                <h3 className='text-sm/4 font-semibold text-gray-400'>
-                  Releases
+                <h3 className='text-sm/4 font-semibold text-foreground/30'>
+                  Intelligence
                 </h3>
-                <p className='mt-2 text-lg font-medium tracking-tight text-white'>
+                <p className='mt-2 text-lg font-medium tracking-tight text-foreground'>
                   AI Dream Team
                 </p>
-                <p className='mt-2 max-w-lg text-sm/6 text-gray-400'>
+                <p className='mt-2 max-w-lg text-sm/6 text-foreground/60'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                   gravida justo et nulla efficitur, maximus egestas sem
                   pellentesque.
