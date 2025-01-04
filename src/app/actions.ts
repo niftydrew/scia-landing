@@ -2,7 +2,6 @@
 
 import { supabase } from '@/lib/supabase';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function login() {
   console.log('Attempting to login anonymously');
   const { data, error } = await supabase.auth.signInAnonymously();
@@ -44,10 +43,10 @@ export async function submitEmail(email: string) {
       });
 
       if (error.code === '23505') {
-        return { 
-          success: false, 
+        return {
+          success: false,
           error: 'duplicate',
-          message: 'This email is already on our waitlist.'
+          message: 'This email is already on our waitlist.',
         };
       }
 
@@ -58,10 +57,10 @@ export async function submitEmail(email: string) {
     return { success: true };
   } catch (error) {
     console.error('Full error object:', error);
-    return { 
-      success: false, 
+    return {
+      success: false,
       error: 'unknown',
-      message: 'Failed to submit email. Please try again.' 
+      message: 'Failed to submit email. Please try again.',
     };
   }
 }
