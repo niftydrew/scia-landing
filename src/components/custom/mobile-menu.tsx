@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { Menu } from 'lucide-react';
 import { NavLink } from './nav-link';
 import { WaitlistButton } from './waitlist-button';
 import { navigationItems } from '@/config/navigation';
@@ -23,9 +22,12 @@ export function MobileMenu({ className }: MobileMenuProps) {
           <Button
             variant='default'
             size='icon'
-            className='bg-sciaprimary w-10 h-10 text-black focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg hover:bg-sciaprimary active:bg-sciaprimary active:scale-100'
+            className='bg-transparent w-auto h-auto p-2 text-foreground focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg hover:bg-foreground/10 active:bg-foreground/10'
           >
-            <Menu className='h-6 w-6' />
+            <div className="flex flex-col gap-2">
+              <div className="w-6 h-0.5 bg-current rounded-full"></div>
+              <div className="w-6 h-0.5 bg-current rounded-full"></div>
+            </div>
           </Button>
         </SheetTrigger>
         <SheetContent
@@ -42,6 +44,7 @@ export function MobileMenu({ className }: MobileMenuProps) {
                 <NavLink
                   key={item.href}
                   href={item.href}
+                  isExternal={'isExternal' in item ? item.isExternal : undefined}
                   className='block px-3 py-2 hover:bg-sciaprimary/10 rounded-lg transition-colors'
                 >
                   {item.label}

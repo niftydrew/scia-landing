@@ -43,6 +43,7 @@ export function StickyNavbar() {
             <NavLink
               key={item.href}
               href={item.href}
+              isExternal={'isExternal' in item ? item.isExternal : undefined}
             >
               {item.label}
             </NavLink>

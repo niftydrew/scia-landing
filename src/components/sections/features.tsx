@@ -15,7 +15,7 @@ const cardVariants = {
 
 export function Features() {
   return (
-    <div className='py-24 sm:py-32'>
+    <div id="features" className='py-24 sm:py-32'>
       <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%]'>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className='mt-2 max-w-lg text-4xl font-normal tracking-tight text-pretty text-foreground sm:text-5xl'
+          className='mt-2 max-w-lg text-3xl font-medium tracking-tight text-pretty text-foreground sm:text-4xl'
         >
           Stay ahead of the market with Scia
         </motion.p>

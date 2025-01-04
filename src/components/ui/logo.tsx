@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
 export function Logo() {
   return (
@@ -12,5 +12,5 @@ export function Logo() {
         className='h-9 w-auto'
       />
     </Link>
-  )
+  );
 }
