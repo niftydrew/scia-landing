@@ -9,7 +9,7 @@ export function HeroBadge({ className }: HeroBadgeProps) {
     >
       <span className='flex h-2 w-2 rounded-full bg-sciaprimary animate-pulse-scia' />
       <span className='text-sm text-foreground/60 tracking-tight'>
-        Introducing Scia - Now in alpha
+        Introducing Scia - Phase 1 Development
       </span>
     </div>
   );
