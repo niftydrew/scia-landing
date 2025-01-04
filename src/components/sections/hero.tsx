@@ -43,13 +43,13 @@ export function Hero() {
           variants={itemVariants}
           className='text-5xl md:text-6xl lg:text-[64px] font-normal mb-4 sm:mb-6 leading-[105%] tracking-tight text-center'
         >
-          The first swarm of crypto intelligent trading agents
+          Smart collaborative intelligent agents
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className='text-base sm:text-lg leading-[150%] tracking-tight text-foreground/60 max-w-[600px] text-center mb-8 sm:mb-12'
+          className='text-base sm:text-lg leading-[150%] tracking-tight text-foreground/60 max-w-[500px] text-center mb-8 sm:mb-12'
         >
-          Scia - Smart Crypto Intelligent Agents, is a multi-agent artificial
+          Scia is a multi-agent artificial
           intelligence system designed for cryptocurrency market analysis.
         </motion.p>
         <motion.div variants={itemVariants}>
