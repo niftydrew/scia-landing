@@ -75,3 +75,23 @@
     -webkit-text-fill-color: hsl(var(--background)) !important;
   }
 }
+
+@layer utilities {
+  .gradient-dark {
+    background: radial-gradient(
+      circle at center,
+      rgba(31, 31, 31, 0.8) 0%,
+      rgba(0, 0, 0, 0.95) 100%
+    );
+    background-color: black;
+  }
+
+  .card-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(31, 31, 31, 0.7) 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+    backdrop-filter: blur(8px);
+  }
+}
