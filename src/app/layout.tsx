@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import '@/styles/globals.css';
 import Navbar from '@/components/features/navbar';
@@ -35,12 +35,13 @@ const circular = localFont({
 export const metadata: Metadata = {
   title: 'Scia',
   description: 'Smart Crypto Intelligent Agents',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({

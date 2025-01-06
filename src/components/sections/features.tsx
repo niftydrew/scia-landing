@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
+import { Tag } from '@/components/ui/tag';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -45,9 +46,7 @@ const FeatureCard = ({
         <Spline scene={splineScene} />
       </div>
       <div className='p-6'>
-        <div className='inline-flex items-center px-3 py-1 rounded-full bg-accent/10 border border-accent/20'>
-          <span className='text-xs font-medium text-accent'>{tag}</span>
-        </div>
+        <Tag>{tag}</Tag>
         <p className='mt-2 text-lg font-medium tracking-tight text-foreground'>
           {title}
         </p>
