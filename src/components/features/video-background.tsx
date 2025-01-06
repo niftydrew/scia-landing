@@ -17,7 +17,7 @@ export function VideoBackground() {
             type='video/mp4'
           />
         </video>
-        <div className='absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-transparent via-background to-background' />
+        <div className='absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent via-background/50 to-background' />
       </div>
     </>
   );

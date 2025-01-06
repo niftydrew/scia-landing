@@ -27,7 +27,7 @@ export function StickyNavbar() {
         y: translateY,
         backgroundColor: headerBackgroundOpacity,
       }}
-      className='fixed top-0 left-0 right-0 z-40 border-b border-foreground/10 backdrop-blur-lg'
+      className='fixed top-0 left-0 right-0 z-40 border-b border-accent/20 backdrop-blur-lg'
     >
       <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%] h-[60px] flex items-center justify-between px-4 pr-2'>
         {/* Logo */}
