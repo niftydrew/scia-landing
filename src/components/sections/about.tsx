@@ -1,18 +1,17 @@
-'use client';
+
 
 import { motion } from 'framer-motion';
 import { Tag } from '@/components/ui/tag';
-import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export function About() {
   return (
     <div
       id='about'
-      className='py-24 sm:py-32 h-screen flex flex-col justify-center items-center'
+      className='py-24 sm:py-32 min-h-screen flex flex-col justify-center items-center'
     >
-      <div className='mx-auto max-w-[1024px] w-full h-full grid grid-cols-1 md:grid-cols-2 gap-20'>
-        <div className='w-full bg-accent/10 h-full'></div>
-        <div className='w-full flex flex-col justify-center max-w-[500px]'>
+      <div className='mx-auto max-w-[1024px] w-full grid grid-cols-1 px-6'>
+        <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -20,7 +19,7 @@ export function About() {
             transition={{ duration: 0.8 }}
             className='text-base/7 font-normal text-accent tracking-tight'
           >
-            <Tag size="lg">About Us</Tag>
+            <Tag size='lg'>Our Story</Tag>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -36,23 +35,30 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-6 text-lg/8 text-foreground/50"
+            className='mt-6 text-lg/8 text-foreground/50'
           >
-            In the chaotic world of cryptocurrency trading, we saw traders drowning in data yet starving for insights. Every day, they faced an avalanche of information from countless sources, trying to piece together market movements while battling their own emotions and biases.
+            In the chaotic world of cryptocurrency trading, we saw traders
+            drowning in data yet starving for insights. Every day, they faced an
+            avalanche of information from countless sources, trying to piece
+            together market movements while battling their own emotions and
+            biases.
           </motion.p>
-          <motion.a
-            href="#"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-8 inline-flex items-center gap-2 text-accent hover:gap-4 transition-all"
-          >
-            <span>Learn more</span>
-            <ArrowRight className="w-5 h-5" />
-          </motion.a>
-          {/* Add more content here */}
         </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className='relative w-full aspect-[16/9] max-w-2xl mx-auto'
+        >
+          <Image
+            src='/assets/planetnew.svg'
+            alt='Planet visualization'
+            fill
+            className='object-cover rounded-2xl'
+            priority
+          />
+        </motion.div>
       </div>
     </div>
   );
