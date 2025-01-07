@@ -191,7 +191,7 @@ export function Team() {
       ref={containerRef}
       className='relative h-[1000vh]'
     >
-      <div className='sticky top-0 h-[40vh] sm:h-[60vh] mb-12 sm:mb-[20vh] flex items-center justify-center'>
+      <div className='sticky top-0 h-[40vh] sm:h-[60vh] mb-[40vh] sm:mb-[20vh] flex items-center justify-center'>
         <div className='w-full max-w-7xl mx-auto px-4 sm:px-6'>
           <div className='text-center mb-12'>
             <Tag size='lg'>Meet The Team</Tag>

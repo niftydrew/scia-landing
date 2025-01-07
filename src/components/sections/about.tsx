@@ -79,7 +79,7 @@ export function About() {
         ref={containerRef}
         className='relative h-[200vh] sm:h-[300vh]'
       >
-        <div className='sticky top-16 sm:top-24 h-[80vh] sm:h-screen flex flex-col justify-center items-center'>
+        <div className='sticky top-40 sm:top-24 h-[80vh] sm:h-screen flex flex-col justify-center items-center'>
           <div className='mx-auto max-w-[1024px] w-full grid grid-cols-1 px-4 sm:px-6'>
             <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
               {sections.map((section, index) => (
