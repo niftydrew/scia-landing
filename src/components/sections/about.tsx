@@ -74,60 +74,62 @@ export function About() {
   const progressArray = [progress1, progress2, progress3, progress4, progress5];
 
   return (
-    <div
-      ref={containerRef}
-      className='relative h-[500vh] py-24'
-    >
-      <div className='sticky top-24 min-h-[calc(100vh-6rem)] flex flex-col justify-center items-center py-16'>
-        <div className='mx-auto max-w-[1024px] w-full grid grid-cols-1 px-4 sm:px-6'>
-          <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
-            {sections.map((section, index) => (
-              <motion.div
-                key={section.title}
-                style={{
-                  opacity: progressArray[index],
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  width: '100%',
-                  pointerEvents: 'none',
-                }}
-              >
-                <motion.h2 className='text-base/7 font-normal text-accent tracking-tight'>
-                  <Tag size='lg'>{section.tag}</Tag>
-                </motion.h2>
-                <motion.p className='mt-6 text-4xl font-medium tracking-tight text-foreground sm:text-5xl px-4 sm:px-0'>
-                  {section.title}
-                </motion.p>
-                <motion.p className='mt-6 text-lg/8 text-foreground/50 max-w-xl mx-auto px-4 sm:px-0'>
-                  {section.content}
-                </motion.p>
-                <motion.div className='mt-12 w-48 h-1 bg-accent/20 rounded-full overflow-hidden mx-auto'>
-                  <motion.div
-                    className='h-full bg-accent rounded-full'
-                    style={{ scaleX: scrollYProgress, transformOrigin: 'left' }}
-                  />
-                </motion.div>
+    <section className='relative pt-32'>
+      <div
+        ref={containerRef}
+        className='relative h-[300vh]'
+      >
+        <div className='sticky top-0 h-screen flex flex-col justify-center items-center'>
+          <div className='mx-auto max-w-[1024px] w-full grid grid-cols-1 px-4 sm:px-6'>
+            <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
+              {sections.map((section, index) => (
                 <motion.div
+                  key={section.title}
                   style={{
                     opacity: progressArray[index],
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    width: '100%',
+                    pointerEvents: 'none',
                   }}
-                  className='relative w-full aspect-[16/9] max-w-2xl mx-auto'
                 >
-                  <Image
-                    src='/assets/planet.svg'
-                    alt='Planet visualization'
-                    fill
-                    className='object-contain rounded-2xl'
-                    priority
-                  />
+                  <motion.h2 className='text-base/7 font-normal text-accent tracking-tight'>
+                    <Tag size='lg'>{section.tag}</Tag>
+                  </motion.h2>
+                  <motion.p className='mt-6 text-4xl font-medium tracking-tight text-foreground sm:text-5xl px-4 sm:px-0'>
+                    {section.title}
+                  </motion.p>
+                  <motion.p className='mt-6 text-lg/8 text-foreground/50 max-w-xl mx-auto px-4 sm:px-0'>
+                    {section.content}
+                  </motion.p>
+                  <motion.div className='mt-12 w-48 h-1 bg-accent/20 rounded-full overflow-hidden mx-auto'>
+                    <motion.div
+                      className='h-full bg-accent rounded-full'
+                      style={{ scaleX: scrollYProgress, transformOrigin: 'left' }}
+                    />
+                  </motion.div>
+                  <motion.div
+                    style={{
+                      opacity: progressArray[index],
+                    }}
+                    className='relative w-full aspect-[16/9] max-w-2xl mx-auto'
+                  >
+                    <Image
+                      src='/assets/planet.svg'
+                      alt='Planet visualization'
+                      fill
+                      className='object-contain rounded-2xl'
+                      priority
+                    />
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

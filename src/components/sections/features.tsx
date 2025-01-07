@@ -41,7 +41,9 @@ const FeatureCard = ({
     transition={{ delay }}
     className={colSpan}
   >
-    <div className={`flex flex-col overflow-hidden rounded-lg bg-accent/10 ring-1 ring-accent/10 ${className}`}>
+    <div
+      className={`flex flex-col overflow-hidden rounded-lg bg-accent/10 ring-1 ring-accent/10 ${className}`}
+    >
       <div className='w-full h-64 flex justify-start items-start relative'>
         <Spline scene={splineScene} />
       </div>
@@ -50,7 +52,9 @@ const FeatureCard = ({
         <p className='mt-2 text-lg font-medium tracking-tight text-foreground'>
           {title}
         </p>
-        <p className='mt-2 max-w-lg text-sm/6 text-foreground/60'>{description}</p>
+        <p className='mt-2 max-w-lg text-sm/6 text-foreground/60'>
+          {description}
+        </p>
       </div>
     </div>
   </motion.div>
@@ -60,7 +64,8 @@ const features = [
   {
     tag: 'Intelligence',
     title: 'AI Dream Team',
-    description: 'Specialized agents like JACK (Data Detective), EMMA (Technical Wizard), and NOAH (Sentiment Sage) working in perfect harmony',
+    description:
+      'Specialized agents like JACK (Data Detective), EMMA (Technical Wizard), and NOAH (Sentiment Sage) working in perfect harmony',
     splineScene: 'https://prod.spline.design/u752EVMdwPo2y2xm/scene.splinecode',
     className: 'max-lg:rounded-t-[2rem] lg:rounded-tl-[2rem] w-full',
     colSpan: 'sm:col-span-2 lg:col-span-4',
@@ -69,7 +74,8 @@ const features = [
   {
     tag: 'Integrations',
     title: 'Comprehensive Analysis',
-    description: 'Multi-source data integration, pattern recognition, and sentiment analysis.',
+    description:
+      'Multi-source data integration, pattern recognition, and sentiment analysis.',
     splineScene: 'https://prod.spline.design/tap3U3d34t7wJRKa/scene.splinecode',
     className: 'lg:rounded-tr-[2rem]',
     colSpan: 'sm:col-span-1 lg:col-span-2',
@@ -78,7 +84,8 @@ const features = [
   {
     tag: 'Performance',
     title: 'Real-Time Processing',
-    description: 'Enterprise-grade infrastructure for lightning-fast market analysis and signals.',
+    description:
+      'Enterprise-grade infrastructure for lightning-fast market analysis and signals.',
     splineScene: 'https://prod.spline.design/PNrAqUl6CHwR1Bja/scene.splinecode',
     className: 'lg:rounded-bl-[2rem]',
     colSpan: 'sm:col-span-1 lg:col-span-2',
@@ -87,7 +94,8 @@ const features = [
   {
     tag: 'Growth',
     title: 'Performance Optimization',
-    description: 'Continuous learning from performance data to improve strategy accuracy.',
+    description:
+      'Continuous learning from performance data to improve strategy accuracy.',
     splineScene: 'https://prod.spline.design/6TStQo4ksADA-mHF/scene.splinecode',
     className: 'md:rounded-bl-[2rem] lg:rounded-bl-lg',
     colSpan: 'sm:col-span-1 lg:col-span-2',
@@ -96,7 +104,8 @@ const features = [
   {
     tag: 'Security',
     title: 'Risk Intelligence',
-    description: 'Dedicated risk management through LIAM, the Risk Protector agent.',
+    description:
+      'Dedicated risk management through LIAM, the Risk Protector agent.',
     splineScene: 'https://prod.spline.design/TBTl3TYUCjjs0Yjq/scene.splinecode',
     className: 'max-md:rounded-b-[2rem] md:rounded-br-[2rem]',
     colSpan: 'sm:col-span-1 lg:col-span-2',
@@ -106,7 +115,10 @@ const features = [
 
 export function Features() {
   return (
-    <div id='features' className='py-24 sm:py-32'>
+    <div
+      id='features'
+      className='py-24 sm:py-32 mt-32'
+    >
       <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%]'>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -131,11 +143,15 @@ export function Features() {
           }}
           className='mt-6 text-lg text-center text-foreground/60 max-w-[600px] mx-auto'
         >
-          Experience the future of crypto trading with our advanced AI agents working in harmony to deliver precise, real-time market insights.
+          Experience the future of crypto trading with our advanced AI agents
+          working in harmony to deliver precise, real-time market insights.
         </motion.p>
         <div className='mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6'>
           {features.map((feature) => (
-            <FeatureCard key={feature.tag} {...feature} />
+            <FeatureCard
+              key={feature.tag}
+              {...feature}
+            />
           ))}
         </div>
       </div>

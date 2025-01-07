@@ -189,61 +189,19 @@ export function Team() {
   return (
     <div
       ref={containerRef}
-      className='relative min-h-[1000vh]'
+      className='relative h-[1000vh]'
     >
-      <div className='sticky top-[-30vh] min-h-screen h-[800px] flex items-center justify-center bg-background '>
+      <div className='sticky top-0 h-[60vh] mb-[20vh] flex items-center justify-center bg-background'>
         <div className='w-full max-w-7xl mx-auto px-4 sm:px-6'>
           <div className='text-center mb-12'>
-            <Tag size='lg'>
-              Meet The Team
-            </Tag>
+            <Tag size='lg'>Meet The Team</Tag>
             <p className='mt-6 text-4xl font-medium tracking-tight text-foreground sm:text-5xl'>
               Our AI Dream Team
             </p>
           </div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto'>
-            {/* Left Column - 1/3 width */}
-            <div className='h-full flex flex-col justify-center items-center relative'>
-              {agents.map((agent, index) => (
-                <motion.div
-                  key={agent.name}
-                  className='absolute top-0 left-0 w-full'
-                  style={{ opacity: progressArray[index] }}
-                >
-                  <div className='h-full space-y-6 mt-7'>
-                    <div>
-                      <h3 className='text-3xl font-medium'>{agent.name}</h3>
-                      <p className='text-accent text-sm'>{agent.role}</p>
-                    </div>
-                    <ul className='space-y-3 mb-8'>
-                      {agent.responsibilities.map((responsibility, idx) => (
-                        <li
-                          key={idx}
-                          className='text-foreground/50 flex'
-                        >
-                          <span className='text-accent mr-2'>◆</span>
-                          {responsibility}
-                        </li>
-                      ))}
-                    </ul>
-                    {/* Progress bar */}
-                    <motion.div className='w-32 h-1 bg-accent/20 rounded-full overflow-hidden'>
-                      <motion.div
-                        className='h-full bg-accent rounded-full'
-                        style={{
-                          scaleX: scrollYProgress,
-                          transformOrigin: 'left',
-                        }}
-                      />
-                    </motion.div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Right Column - 2/3 width */}
-            <div className='lg:col-span-2'>
+          <div className='flex flex-col justify-center gap-8 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto'>
+            <div className='w-full max-w-2xl mx-auto'>
               <div className='relative h-full'>
                 {agents.map((agent, agentIndex) => (
                   <motion.div
@@ -251,18 +209,41 @@ export function Team() {
                     className='absolute top-0 left-0 w-full'
                     style={{ opacity: progressArray[agentIndex] }}
                   >
-                    <div
-                      className='relative aspect-video rounded-2xl overflow-hidden bg-accent/10'
-                    >
+                    <div className='relative aspect-video rounded-2xl overflow-hidden bg-accent/10'>
                       <Image
                         src={agent.image}
                         alt={`${agent.name} - ${agent.title}`}
-                        width={960}
-                        height={540}
+                        fill
                         className='object-cover'
                         quality={90}
                         priority={agentIndex === 0}
                       />
+                      {/* Gradient Overlay */}
+                      <div className='absolute inset-0 bg-gradient-to-t from-background/95 via-background/50 to-transparent' />
+
+                      {/* Content Overlay */}
+                      <div className='absolute inset-0 flex flex-col justify-end p-6'>
+                        <div className='text-left'>
+                          <h3 className='text-2xl font-medium text-white'>
+                            {agent.name}
+                          </h3>
+                          <p className='text-accent mt-1'>{agent.role}</p>
+                          <div className='mt-4 grid grid-cols-3 gap-3'>
+                            {agent.responsibilities.map(
+                              (responsibility, idx) => (
+                                <div
+                                  key={idx}
+                                  className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg px-3 h-10 flex items-center justify-center text-center group hover:bg-white/10 transition-colors'
+                                >
+                                  <span className='text-foreground/90 text-sm truncate'>
+                                    {responsibility}
+                                  </span>
+                                </div>
+                              )
+                            )}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
