@@ -47,34 +47,27 @@ export function Team() {
           {/* Right Column - 2/3 width */}
           <div className='lg:col-span-2'>
             <div className='grid grid-cols-3 gap-4'>
-              <div className='relative aspect-[3/4] rounded-3xl overflow-hidden group bg-accent/10'>
-                <Image
-                  src='/assets/emma.png'
-                  alt='AI Team Member 1'
-                  fill
-                  className='object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-[mix-blend-mode] duration-700 ease-in-out'
-                  sizes='(max-width: 768px) 100vw, 33vw'
-                  priority
-                />
-              </div>
-              <div className='relative aspect-[3/4] rounded-3xl overflow-hidden group bg-accent/10'>
-                <Image
-                  src='/assets/jack.png'
-                  alt='AI Team Member 2'
-                  fill
-                  className='object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-[mix-blend-mode] duration-700 ease-in-out'
-                  sizes='(max-width: 768px) 100vw, 33vw'
-                />
-              </div>
-              <div className='relative aspect-[3/4] rounded-3xl overflow-hidden group bg-accent/10'>
-                <Image
-                  src='/assets/emma.png'
-                  alt='AI Team Member 3'
-                  fill
-                  className='object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-[mix-blend-mode] duration-700 ease-in-out'
-                  sizes='(max-width: 768px) 100vw, 33vw'
-                />
-              </div>
+              {['/assets/emma.png', '/assets/jack.png', '/assets/emma.png'].map((src, index) => (
+                <div key={index} className='relative aspect-[3/4] rounded-3xl overflow-hidden group bg-accent/10'>
+                  {/* Normal image */}
+                  <Image
+                    src={src}
+                    alt={`AI Team Member ${index + 1}`}
+                    fill
+                    className='object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out'
+                    sizes='(max-width: 768px) 100vw, 33vw'
+                    priority={index === 0}
+                  />
+                  {/* Luminosity image */}
+                  <Image
+                    src={src}
+                    alt={`AI Team Member ${index + 1} Luminosity`}
+                    fill
+                    className='object-cover opacity-100 group-hover:opacity-0 transition-opacity duration-700 ease-in-out mix-blend-luminosity'
+                    sizes='(max-width: 768px) 100vw, 33vw'
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
