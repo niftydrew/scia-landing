@@ -9,108 +9,108 @@ const agents = [
   {
     name: 'Jack',
     title: 'The Data Detective',
-    role: 'Chief Intelligence Officer',
+    role: 'The Data Detective',
     responsibilities: [
       '24/7 Market Data Collection',
       'Anomaly Detection',
       'Data Quality Control',
     ],
-    images: ['/assets/jack1.png', '/assets/emma1.png', '/assets/jack1.png'],
+    image: '/assets/jack.png',
   },
   {
     name: 'Emma',
     title: 'The Technical Wizard',
-    role: 'Head of Market Research',
+    role: 'The Technical Wizard',
     responsibilities: ['Pattern Analysis', 'Trading Signals', 'Trend Tracking'],
-    images: ['/assets/emma1.png', '/assets/emma1.png', '/assets/emma1.png'],
+    image: '/assets/emma.png',
   },
   {
     name: 'Noah',
     title: 'The Sentiment Sage',
-    role: 'Chief Insights Strategist',
+    role: 'The Sentiment Sage',
     responsibilities: [
       'Social Sentiment',
       'News Analysis',
       'Market Psychology',
     ],
-    images: ['/assets/emma1.png', '/assets/emma1.png', '/assets/emma1.png'],
+    image: '/assets/noah.png',
   },
   {
     name: 'Sophia',
     title: 'The Quality Guardian',
-    role: 'Quality Assurance Manager',
+    role: 'The Quality Guardian',
     responsibilities: [
       'Data Validation',
       'System Integrity',
       'Signal Filtering',
     ],
-    images: ['/assets/emma1.png', '/assets/emma1.png', '/assets/emma1.png'],
+    image: '/assets/sophia.png',
   },
   {
     name: 'Ethan',
     title: 'The Analysis Auditor',
-    role: 'Chief Validation Officer',
+    role: 'The Analysis Auditor',
     responsibilities: [
       'Analysis Verification',
       'Performance Metrics',
       'Output Validation',
     ],
-    images: ['/assets/emma1.png', '/assets/emma1.png', '/assets/emma1.png'],
+    image: '/assets/ethan.png',
   },
   {
     name: 'Olivia',
     title: 'The Prediction Maven',
-    role: 'Head of Predictive Analytics',
+    role: 'The Prediction Maven',
     responsibilities: [
       'Price Forecasting',
       'Trend Analysis',
       'Strategy Creation',
     ],
-    images: ['/assets/emma1.png', '/assets/emma1.png', '/assets/emma1.png'],
+    image: '/assets/oilvia.png',
   },
   {
     name: 'Liam',
     title: 'The Risk Protector',
-    role: 'Chief Risk Officer',
+    role: 'The Risk Protector',
     responsibilities: [
       'Risk Assessment',
       'Position Sizing',
       'Portfolio Safety',
     ],
-    images: ['/assets/emma1.png', '/assets/emma1.png', '/assets/emma1.png'],
+    image: '/assets/liam.png',
   },
   {
     name: 'Ava',
     title: 'The System Orchestrator',
-    role: 'Chief Executive Strategist',
+    role: 'The System Orchestrator',
     responsibilities: [
       'System Coordination',
       'Performance Tuning',
       'Operation Flow',
     ],
-    images: ['/assets/emma1.png', '/assets/emma1.png', '/assets/emma1.png'],
+    image: '/assets/ava.png',
   },
   {
     name: 'Mason',
     title: 'The History Keeper',
-    role: 'Performance Tracking Manager',
+    role: 'The History Keeper',
     responsibilities: [
       'Record Keeping',
       'Accuracy Tracking',
       'Result Analysis',
     ],
-    images: ['/assets/emma1.png', '/assets/emma1.png', '/assets/emma1.png'],
+    image: '/assets/mason.png',
   },
   {
     name: 'Zoe',
     title: 'The Communications Expert',
-    role: 'Head of External Communications',
+    role: 'The Communications Expert',
     responsibilities: [
       'Signal Delivery',
       'Alert Generation',
       'Insight Sharing',
     ],
-    images: ['/assets/emma1.png', '/assets/emma1.png', '/assets/emma1.png'],
+    image: '/assets/zoe.png',
   },
 ];
 
@@ -191,12 +191,12 @@ export function Team() {
       ref={containerRef}
       className='relative min-h-[1000vh]'
     >
-      <div className='sticky top-[-20vh] min-h-screen flex items-center justify-center bg-background '>
+      <div className='sticky top-[-30vh] min-h-screen h-[800px] flex items-center justify-center bg-background '>
         <div className='w-full max-w-7xl mx-auto px-4 sm:px-6'>
           <div className='text-center mb-12'>
-            <h2 className='text-base font-normal text-accent tracking-tight'>
+            <Tag size='lg'>
               Meet The Team
-            </h2>
+            </Tag>
             <p className='mt-6 text-4xl font-medium tracking-tight text-foreground sm:text-5xl'>
               Our AI Dream Team
             </p>
@@ -204,17 +204,19 @@ export function Team() {
 
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto'>
             {/* Left Column - 1/3 width */}
-            <div className='h-full flex flex-col justify-center relative'>
+            <div className='h-full flex flex-col justify-center items-center relative'>
               {agents.map((agent, index) => (
                 <motion.div
                   key={agent.name}
                   className='absolute top-0 left-0 w-full'
                   style={{ opacity: progressArray[index] }}
                 >
-                  <div className='space-y-6'>
-                    <h3 className='text-3xl font-medium'>{agent.name}</h3>
-                    <Tag>{agent.role}</Tag>
-                    <ul className='space-y-4 mb-8'>
+                  <div className='h-full space-y-6 mt-7'>
+                    <div>
+                      <h3 className='text-3xl font-medium'>{agent.name}</h3>
+                      <p className='text-accent text-sm'>{agent.role}</p>
+                    </div>
+                    <ul className='space-y-3 mb-8'>
                       {agent.responsibilities.map((responsibility, idx) => (
                         <li
                           key={idx}
@@ -242,30 +244,26 @@ export function Team() {
 
             {/* Right Column - 2/3 width */}
             <div className='lg:col-span-2'>
-              <div className='grid grid-cols-3 gap-4 relative'>
+              <div className='relative h-full'>
                 {agents.map((agent, agentIndex) => (
                   <motion.div
                     key={agent.name}
-                    className='absolute top-0 left-0 w-full grid grid-cols-3 gap-4'
+                    className='absolute top-0 left-0 w-full'
                     style={{ opacity: progressArray[agentIndex] }}
                   >
-                    {agent.images.map((image, imageIndex) => (
-                      <div
-                        key={imageIndex}
-                        className='relative aspect-[3/4] rounded-3xl overflow-hidden bg-accent/10'
-                      >
-                        <Image
-                          src={image}
-                          alt={`${agent.name} - ${agent.title} ${
-                            imageIndex + 1
-                          }`}
-                          fill
-                          className='object-cover'
-                          sizes='(max-width: 768px) 100vw, 33vw'
-                          priority={imageIndex === 0}
-                        />
-                      </div>
-                    ))}
+                    <div
+                      className='relative aspect-video rounded-2xl overflow-hidden bg-accent/10'
+                    >
+                      <Image
+                        src={agent.image}
+                        alt={`${agent.name} - ${agent.title}`}
+                        width={960}
+                        height={540}
+                        className='object-cover'
+                        quality={90}
+                        priority={agentIndex === 0}
+                      />
+                    </div>
                   </motion.div>
                 ))}
               </div>
