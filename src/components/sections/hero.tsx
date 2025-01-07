@@ -49,8 +49,8 @@ export function Hero() {
           variants={itemVariants}
           className='text-base sm:text-lg leading-[150%] tracking-tight text-foreground/60 max-w-[500px] text-center mb-8 sm:mb-12'
         >
-          Scia is a multi-agent artificial
-          intelligence system designed for cryptocurrency market analysis.
+          Scia is a multi-agent artificial intelligence system designed for
+          cryptocurrency market analysis.
         </motion.p>
         <motion.div variants={itemVariants}>
           <WaitlistForm />

@@ -4,6 +4,7 @@ import { Tag } from '../ui/tag';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { AnimatedLines } from '../ui/animated-lines';
 
 const agents = [
   {
@@ -191,6 +192,7 @@ export function Team() {
       ref={containerRef}
       className='relative h-[1000vh]'
     >
+      <AnimatedLines />
       <div className='sticky top-0 h-[40vh] sm:h-[60vh] mb-[40vh] sm:mb-[20vh] flex items-center justify-center'>
         <div className='w-full max-w-7xl mx-auto px-4 sm:px-6'>
           <div className='text-center mb-12'>
@@ -209,6 +211,9 @@ export function Team() {
                     className='absolute top-0 left-0 w-full'
                     style={{ opacity: progressArray[agentIndex] }}
                   >
+                    {/* Glow Effect */}
+                    <div className='absolute -inset-20 rounded-[3rem] bg-gradient-to-r from-sciaprimary/30 via-sciaprimary/20 to-sciaprimary/30 blur-[64px] -z-10' />
+                    
                     <div className='relative aspect-[3/4] sm:aspect-video rounded-2xl overflow-hidden'>
                       <Image
                         src={agent.image}
