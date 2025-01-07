@@ -191,7 +191,7 @@ export function Team() {
       ref={containerRef}
       className='relative h-[1000vh]'
     >
-      <div className='sticky top-0 h-[60vh] mb-[20vh] flex items-center justify-center bg-background'>
+      <div className='sticky top-0 h-[60vh] mb-[20vh] flex items-center justify-center'>
         <div className='w-full max-w-7xl mx-auto px-4 sm:px-6'>
           <div className='text-center mb-12'>
             <Tag size='lg'>Meet The Team</Tag>
@@ -209,7 +209,7 @@ export function Team() {
                     className='absolute top-0 left-0 w-full'
                     style={{ opacity: progressArray[agentIndex] }}
                   >
-                    <div className='relative aspect-video rounded-2xl overflow-hidden bg-accent/10'>
+                    <div className='relative aspect-video rounded-2xl overflow-hidden'>
                       <Image
                         src={agent.image}
                         alt={`${agent.name} - ${agent.title}`}

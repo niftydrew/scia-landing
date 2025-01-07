@@ -74,12 +74,12 @@ export function About() {
   const progressArray = [progress1, progress2, progress3, progress4, progress5];
 
   return (
-    <section className='relative pt-32'>
+    <section id='about' className='relative pt-32'>
       <div
         ref={containerRef}
         className='relative h-[300vh]'
       >
-        <div className='sticky top-0 h-screen flex flex-col justify-center items-center'>
+        <div className='sticky top-24 h-screen flex flex-col justify-center items-center'>
           <div className='mx-auto max-w-[1024px] w-full grid grid-cols-1 px-4 sm:px-6'>
             <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
               {sections.map((section, index) => (
@@ -104,12 +104,6 @@ export function About() {
                   <motion.p className='mt-6 text-lg/8 text-foreground/50 max-w-xl mx-auto px-4 sm:px-0'>
                     {section.content}
                   </motion.p>
-                  <motion.div className='mt-12 w-48 h-1 bg-accent/20 rounded-full overflow-hidden mx-auto'>
-                    <motion.div
-                      className='h-full bg-accent rounded-full'
-                      style={{ scaleX: scrollYProgress, transformOrigin: 'left' }}
-                    />
-                  </motion.div>
                   <motion.div
                     style={{
                       opacity: progressArray[index],
