@@ -54,7 +54,7 @@ export function About() {
       className='relative h-[500vh] py-32'
     >
       <div className='sticky top-24 min-h-[calc(100vh-6rem)] flex flex-col justify-center items-center py-16'>
-        <div className='mx-auto max-w-[1024px] w-full grid grid-cols-1 px-6'>
+        <div className='mx-auto max-w-[1024px] w-full grid grid-cols-1 px-4 sm:px-6'>
           <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
             {sections.map((section, index) => (
               <motion.div
@@ -75,12 +75,12 @@ export function About() {
                   <Tag size='lg'>{section.tag}</Tag>
                 </motion.h2>
                 <motion.p
-                  className='mt-6 text-4xl font-medium tracking-tight text-foreground sm:text-5xl'
+                  className='mt-6 text-4xl font-medium tracking-tight text-foreground sm:text-5xl px-4 sm:px-0'
                 >
                   {section.title}
                 </motion.p>
                 <motion.p
-                  className='mt-6 text-lg/8 text-foreground/50 max-w-xl mx-auto'
+                  className='mt-6 text-lg/8 text-foreground/50 max-w-xl mx-auto px-4 sm:px-0'
                 >
                   {section.content}
                 </motion.p>
