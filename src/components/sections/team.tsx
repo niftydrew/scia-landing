@@ -191,7 +191,7 @@ export function Team() {
       ref={containerRef}
       className='relative h-[1000vh]'
     >
-      <div className='sticky top-0 h-[60vh] mb-[20vh] flex items-center justify-center'>
+      <div className='sticky top-0 h-[40vh] sm:h-[60vh] mb-12 sm:mb-[20vh] flex items-center justify-center'>
         <div className='w-full max-w-7xl mx-auto px-4 sm:px-6'>
           <div className='text-center mb-12'>
             <Tag size='lg'>Meet The Team</Tag>
@@ -209,7 +209,7 @@ export function Team() {
                     className='absolute top-0 left-0 w-full'
                     style={{ opacity: progressArray[agentIndex] }}
                   >
-                    <div className='relative aspect-video rounded-2xl overflow-hidden'>
+                    <div className='relative aspect-[3/4] sm:aspect-video rounded-2xl overflow-hidden'>
                       <Image
                         src={agent.image}
                         alt={`${agent.name} - ${agent.title}`}
@@ -228,12 +228,12 @@ export function Team() {
                             {agent.name}
                           </h3>
                           <p className='text-accent mt-1'>{agent.role}</p>
-                          <div className='mt-4 grid grid-cols-3 gap-3'>
+                          <div className='mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3'>
                             {agent.responsibilities.map(
                               (responsibility, idx) => (
                                 <div
                                   key={idx}
-                                  className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg px-3 h-10 flex items-center justify-center text-center group hover:bg-white/10 transition-colors'
+                                  className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg px-3 h-8 sm:h-10 flex items-center justify-center text-center group hover:bg-white/10 transition-colors'
                                 >
                                   <span className='text-foreground/90 text-sm truncate'>
                                     {responsibility}
