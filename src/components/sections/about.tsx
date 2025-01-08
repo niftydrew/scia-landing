@@ -11,30 +11,35 @@ const sections = [
     title: 'The challenge',
     content:
       'In the complex world of cryptocurrency trading, investors face an overwhelming flood of data from countless sources. Traders struggle to process market movements while battling their own emotions and biases, leading to suboptimal trading decisions.',
+    image: '/illustrations/challenge.png',
   },
   {
     tag: 'Vision',
     title: 'Our vision',
     content:
       'We envision a future where AI transforms the trading landscape by empowering traders with clear, actionable insights. Our goal is to bridge the gap between complex market data and strategic decision-making, making successful trading accessible to all.',
+    image: '/illustrations/vision.png',
   },
   {
     tag: 'Solution',
     title: 'The solution',
     content:
       'Enter SCIA—an innovative AI-powered trading companion that combines advanced machine learning with emotional intelligence. Our system processes vast market data while understanding and counteracting common behavioral biases in trading.',
+    image: '/illustrations/solution.svg',
   },
   {
     tag: 'Innovation',
     title: 'Our approach',
     content:
       'By leveraging state-of-the-art AI technology, we analyze complex market patterns, sentiment data, and trading behaviors in real-time. This comprehensive analysis provides traders with clear, actionable insights for better decision-making.',
+    image: '/illustrations/innovation.svg',
   },
   {
     tag: 'Impact',
     title: 'The future',
     content:
       'Our mission is to democratize successful trading by making professional-grade AI tools accessible to traders of all levels. Through SCIA, we are building a future where technology and human insight combine to create better trading outcomes.',
+    image: '/illustrations/impact.svg',
   },
 ];
 
@@ -74,7 +79,10 @@ export function About() {
   const progressArray = [progress1, progress2, progress3, progress4, progress5];
 
   return (
-    <section id='about' className='relative py-20'>
+    <section
+      id='about'
+      className='relative py-20'
+    >
       <div
         ref={containerRef}
         className='relative h-[200vh] sm:h-[300vh]'
@@ -111,8 +119,8 @@ export function About() {
                     className='relative w-full aspect-[16/9] max-w-2xl mx-auto'
                   >
                     <Image
-                      src='/assets/planet.svg'
-                      alt='Planet visualization'
+                      src={section.image}
+                      alt={`${section.title} illustration`}
                       fill
                       className='object-contain rounded-2xl'
                       priority
