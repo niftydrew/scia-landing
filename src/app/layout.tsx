@@ -53,9 +53,10 @@ export default function RootLayout({
     <html
       lang='en'
       suppressHydrationWarning
+      className={circular.className}
     >
       <body
-        className={`${circular.className} min-h-screen bg-background text-foreground`}
+        className='relative overflow-x-hidden min-h-screen bg-background text-foreground'
       >
         <div className='relative'>
           <VideoBackground />

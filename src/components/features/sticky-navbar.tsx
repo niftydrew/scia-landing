@@ -14,7 +14,7 @@ export function StickyNavbar() {
   const headerBackgroundOpacity = useTransform(
     scrollY,
     [400, 500],
-    ['rgba(0, 0, 0, 0.7)', 'rgba(0, 0, 0, 0.9)']
+    ['rgba(165, 180, 252, 0.05)', 'rgba(165, 180, 252, 0.1)']
   );
 
   const opacity = useTransform(scrollY, [400, 500], [0, 1]);

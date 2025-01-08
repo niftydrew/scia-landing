@@ -44,7 +44,7 @@ const FeatureCard = ({
     <div
       className={`flex flex-col overflow-hidden rounded-lg bg-accent/10 ring-1 ring-accent/10 ${className}`}
     >
-      <div className='w-full h-64 flex justify-start items-start relative'>
+      <div className='w-full h-64 flex justify-start items-start relative overflow-hidden'>
         <Spline scene={splineScene} />
       </div>
       <div className='p-6'>
