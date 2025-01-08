@@ -115,46 +115,48 @@ const features = [
 
 export function Features() {
   return (
-    <div
-      id='features'
-      className='py-24 sm:py-32 mt-32'
-    >
-      <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%]'>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.4,
-            ease: 'easeOut',
-          }}
-          className='text-3xl font-medium tracking-tight text-center sm:text-5xl sm:max-w-[600px] mx-auto text-foreground sm:leading-tight'
-        >
-          Unleash the Power of AI-Driven Trading
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.4,
-            ease: 'easeOut',
-            delay: 0.2,
-          }}
-          className='mt-6 text-lg text-center text-foreground/60 max-w-[600px] mx-auto'
-        >
-          Experience the future of crypto trading with our advanced AI agents
-          working in harmony to deliver precise, real-time market insights.
-        </motion.p>
-        <div className='mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6'>
-          {features.map((feature) => (
-            <FeatureCard
-              key={feature.tag}
-              {...feature}
-            />
-          ))}
+    <section className='relative py-20'>
+      <div
+        id='features'
+        className='py-24 sm:py-32 mt-32'
+      >
+        <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%]'>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.4,
+              ease: 'easeOut',
+            }}
+            className='text-3xl font-medium tracking-tight text-center sm:text-5xl sm:max-w-[600px] mx-auto text-foreground sm:leading-tight'
+          >
+            Unleash the Power of AI-Driven Trading
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.4,
+              ease: 'easeOut',
+              delay: 0.2,
+            }}
+            className='mt-6 text-lg text-center text-foreground/60 max-w-[600px] mx-auto'
+          >
+            Experience the future of crypto trading with our advanced AI agents
+            working in harmony to deliver precise, real-time market insights.
+          </motion.p>
+          <div className='mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6'>
+            {features.map((feature) => (
+              <FeatureCard
+                key={feature.tag}
+                {...feature}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

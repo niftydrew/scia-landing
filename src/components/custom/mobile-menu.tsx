@@ -22,7 +22,7 @@ export function MobileMenu({ className }: MobileMenuProps) {
           <Button
             variant='default'
             size='icon'
-            className='bg-transparent w-auto h-auto p-2 text-foreground focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg hover:bg-foreground/10 active:bg-foreground/10'
+            className='bg-transparent border-0 shadow-none w-auto h-auto p-2 text-foreground focus-visible:ring-0 focus-visible:ring-offset-0 rounded-lg hover:bg-transparent active:bg-transparent'
           >
             <div className="flex flex-col gap-2">
               <div className="w-6 h-0.5 bg-current rounded-full"></div>

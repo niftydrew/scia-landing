@@ -188,75 +188,77 @@ export function Team() {
   ];
 
   return (
-    <div
-      ref={containerRef}
-      className='relative h-[600vh]'
-    >
-      <AnimatedLines />
-      <div className='sticky top-0 h-[40vh] sm:h-[60vh] mb-[40vh] sm:mb-[20vh] flex items-center justify-center'>
-        <div className='w-full max-w-7xl mx-auto px-4 sm:px-6'>
-          <div className='text-center mb-12'>
-            <Tag size='lg'>Meet The Team</Tag>
-            <p className='mt-6 text-4xl font-medium tracking-tight text-foreground sm:text-5xl'>
-              Our AI Dream Team
-            </p>
-          </div>
+    <section className='relative py-20'>
+      <div
+        ref={containerRef}
+        className='relative h-[600vh]'
+      >
+        <AnimatedLines />
+        <div className='sticky top-0 h-[40vh] sm:h-[60vh] mb-[40vh] sm:mb-[20vh] flex items-center justify-center'>
+          <div className='w-full max-w-7xl mx-auto px-4 sm:px-6'>
+            <div className='text-center mb-12'>
+              <Tag size='lg'>Meet The Team</Tag>
+              <p className='mt-6 text-4xl font-medium tracking-tight text-foreground sm:text-5xl'>
+                Our AI Dream Team
+              </p>
+            </div>
 
-          <div className='flex flex-col justify-center gap-8 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto'>
-            <div className='w-full max-w-2xl mx-auto'>
-              <div className='relative h-full'>
-                {agents.map((agent, agentIndex) => (
-                  <motion.div
-                    key={agent.name}
-                    className='absolute top-0 left-0 w-full'
-                    style={{ opacity: progressArray[agentIndex] }}
-                  >
-                    {/* Glow Effect */}
-                    <div className='absolute -inset-20 rounded-[3rem] bg-gradient-to-r from-sciaprimary/30 via-sciaprimary/20 to-sciaprimary/30 blur-[64px] -z-10' />
+            <div className='flex flex-col justify-center gap-8 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto'>
+              <div className='w-full max-w-2xl mx-auto'>
+                <div className='relative h-full'>
+                  {agents.map((agent, agentIndex) => (
+                    <motion.div
+                      key={agent.name}
+                      className='absolute top-0 left-0 w-full'
+                      style={{ opacity: progressArray[agentIndex] }}
+                    >
+                      {/* Glow Effect */}
+                      <div className='absolute -inset-20 rounded-[3rem] bg-gradient-to-r from-sciaprimary/30 via-sciaprimary/20 to-sciaprimary/30 blur-[64px] -z-10 hidden sm:block' />
 
-                    <div className='relative aspect-[3/4] sm:aspect-video rounded-2xl overflow-hidden'>
-                      <Image
-                        src={agent.image}
-                        alt={`${agent.name} - ${agent.title}`}
-                        fill
-                        className='object-cover'
-                        quality={90}
-                        priority={agentIndex === 0}
-                      />
-                      {/* Gradient Overlay */}
-                      <div className='absolute inset-0 bg-gradient-to-t from-background/95 via-background/50 to-transparent' />
+                      <div className='relative aspect-[3/4] sm:aspect-video rounded-2xl overflow-hidden'>
+                        <Image
+                          src={agent.image}
+                          alt={`${agent.name} - ${agent.title}`}
+                          fill
+                          className='object-cover'
+                          quality={90}
+                          priority={agentIndex === 0}
+                        />
+                        {/* Gradient Overlay */}
+                        <div className='absolute inset-0 bg-gradient-to-t from-background/95 via-background/50 to-transparent' />
 
-                      {/* Content Overlay */}
-                      <div className='absolute inset-0 flex flex-col justify-end p-6'>
-                        <div className='text-left'>
-                          <h3 className='text-2xl font-medium text-white'>
-                            {agent.name}
-                          </h3>
-                          <p className='text-accent mt-1'>{agent.role}</p>
-                          <div className='mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3'>
-                            {agent.responsibilities.map(
-                              (responsibility, idx) => (
-                                <div
-                                  key={idx}
-                                  className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg px-3 h-8 sm:h-10 flex items-center justify-center text-center group hover:bg-white/10 transition-colors'
-                                >
-                                  <span className='text-foreground/90 text-sm truncate'>
-                                    {responsibility}
-                                  </span>
-                                </div>
-                              )
-                            )}
+                        {/* Content Overlay */}
+                        <div className='absolute inset-0 flex flex-col justify-end p-6'>
+                          <div className='text-left'>
+                            <h3 className='text-2xl font-medium text-white'>
+                              {agent.name}
+                            </h3>
+                            <p className='text-accent mt-1'>{agent.role}</p>
+                            <div className='mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3'>
+                              {agent.responsibilities.map(
+                                (responsibility, idx) => (
+                                  <div
+                                    key={idx}
+                                    className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg px-3 h-8 sm:h-10 flex items-center justify-center text-center group hover:bg-white/10 transition-colors'
+                                  >
+                                    <span className='text-foreground/90 text-sm truncate'>
+                                      {responsibility}
+                                    </span>
+                                  </div>
+                                )
+                              )}
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

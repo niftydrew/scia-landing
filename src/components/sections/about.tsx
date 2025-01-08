@@ -74,7 +74,7 @@ export function About() {
   const progressArray = [progress1, progress2, progress3, progress4, progress5];
 
   return (
-    <section id='about' className='relative pt-16 sm:pt-32'>
+    <section id='about' className='relative py-20'>
       <div
         ref={containerRef}
         className='relative h-[200vh] sm:h-[300vh]'

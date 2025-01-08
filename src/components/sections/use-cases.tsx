@@ -65,11 +65,8 @@ const useCases = [
 
 export function UseCases() {
   return (
-    <section
-      id='use-cases'
-      className='py-20 sm:py-32'
-    >
-      <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%]'>
+    <section className='relative py-20'>
+      <div className='container-section'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

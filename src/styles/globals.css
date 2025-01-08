@@ -76,6 +76,13 @@
   }
 }
 
+@layer components {
+  .container-section {
+    @apply px-4 sm:px-6 lg:px-8 mx-auto max-w-5xl;
+    width: 100%;
+  }
+}
+
 @layer utilities {
   .gradient-dark {
     background: radial-gradient(

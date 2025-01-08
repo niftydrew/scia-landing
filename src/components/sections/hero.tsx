@@ -29,7 +29,7 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className='min-h-screen pt-32 sm:pt-40 pb-20 flex flex-col justify-center items-center px-4 max-w-[800px] mx-auto'>
+    <section className='relative min-h-screen flex items-center justify-center'>
       <motion.div
         className='flex flex-col max-w-[800px] items-center justify-center'
         variants={containerVariants}

@@ -40,8 +40,6 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export default function RootLayout({
@@ -52,18 +50,14 @@ export default function RootLayout({
   return (
     <html
       lang='en'
-      suppressHydrationWarning
       className={circular.className}
+      suppressHydrationWarning
     >
-      <body
-        className='relative overflow-x-hidden min-h-screen bg-background text-foreground'
-      >
-        <div className='relative'>
-          <VideoBackground />
-          <Navbar />
-          <StickyNavbar />
-          <main className='relative'>{children}</main>
-        </div>
+      <body className='relative bg-background text-foreground'>
+        <VideoBackground />
+        <StickyNavbar />
+        <Navbar />
+        <main className='relative'>{children}</main>
         <Toaster />
       </body>
     </html>
