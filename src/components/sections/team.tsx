@@ -125,52 +125,52 @@ export function Team() {
   // Create progress transforms for all 10 agents with longer visibility and less overlap
   const progress1 = useTransform(
     scrollYProgress,
-    [0, 0.02, 0.08, 0.1],
+    [0, 0.01, 0.09, 0.1],
     [1, 1, 1, 0]
   );
   const progress2 = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.18, 0.2],
+    [0.1, 0.11, 0.19, 0.2],
     [0, 1, 1, 0]
   );
   const progress3 = useTransform(
     scrollYProgress,
-    [0.2, 0.22, 0.28, 0.3],
+    [0.2, 0.21, 0.29, 0.3],
     [0, 1, 1, 0]
   );
   const progress4 = useTransform(
     scrollYProgress,
-    [0.3, 0.32, 0.38, 0.4],
+    [0.3, 0.31, 0.39, 0.4],
     [0, 1, 1, 0]
   );
   const progress5 = useTransform(
     scrollYProgress,
-    [0.4, 0.42, 0.48, 0.5],
+    [0.4, 0.41, 0.49, 0.5],
     [0, 1, 1, 0]
   );
   const progress6 = useTransform(
     scrollYProgress,
-    [0.5, 0.52, 0.58, 0.6],
+    [0.5, 0.51, 0.59, 0.6],
     [0, 1, 1, 0]
   );
   const progress7 = useTransform(
     scrollYProgress,
-    [0.6, 0.62, 0.68, 0.7],
+    [0.6, 0.61, 0.69, 0.7],
     [0, 1, 1, 0]
   );
   const progress8 = useTransform(
     scrollYProgress,
-    [0.7, 0.72, 0.78, 0.8],
+    [0.7, 0.71, 0.79, 0.8],
     [0, 1, 1, 0]
   );
   const progress9 = useTransform(
     scrollYProgress,
-    [0.8, 0.82, 0.88, 0.9],
+    [0.8, 0.81, 0.89, 0.9],
     [0, 1, 1, 0]
   );
   const progress10 = useTransform(
     scrollYProgress,
-    [0.9, 0.92, 0.98, 1],
+    [0.9, 0.91, 0.99, 1],
     [0, 1, 1, 1]
   );
 
@@ -190,7 +190,7 @@ export function Team() {
   return (
     <div
       ref={containerRef}
-      className='relative h-[1000vh]'
+      className='relative h-[600vh]'
     >
       <AnimatedLines />
       <div className='sticky top-0 h-[40vh] sm:h-[60vh] mb-[40vh] sm:mb-[20vh] flex items-center justify-center'>
@@ -213,7 +213,7 @@ export function Team() {
                   >
                     {/* Glow Effect */}
                     <div className='absolute -inset-20 rounded-[3rem] bg-gradient-to-r from-sciaprimary/30 via-sciaprimary/20 to-sciaprimary/30 blur-[64px] -z-10' />
-                    
+
                     <div className='relative aspect-[3/4] sm:aspect-video rounded-2xl overflow-hidden'>
                       <Image
                         src={agent.image}
