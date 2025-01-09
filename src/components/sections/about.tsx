@@ -25,21 +25,21 @@ const sections = [
     title: 'The solution',
     content:
       'Enter SCIA—an innovative AI-powered trading companion that combines advanced machine learning with emotional intelligence. Our system processes vast market data while understanding and counteracting common behavioral biases in trading.',
-    image: '/illustrations/solution.svg',
+    image: '/illustrations/solution.png',
   },
   {
     tag: 'Innovation',
     title: 'Our approach',
     content:
       'By leveraging state-of-the-art AI technology, we analyze complex market patterns, sentiment data, and trading behaviors in real-time. This comprehensive analysis provides traders with clear, actionable insights for better decision-making.',
-    image: '/illustrations/innovation.svg',
+    image: '/illustrations/approach.png',
   },
   {
     tag: 'Impact',
     title: 'The future',
     content:
       'Our mission is to democratize successful trading by making professional-grade AI tools accessible to traders of all levels. Through SCIA, we are building a future where technology and human insight combine to create better trading outcomes.',
-    image: '/illustrations/impact.svg',
+    image: '/illustrations/future.png',
   },
 ];
 
@@ -87,7 +87,7 @@ export function About() {
         ref={containerRef}
         className='relative h-[200vh] sm:h-[300vh]'
       >
-        <div className='sticky top-40 sm:top-24 h-[80vh] sm:h-screen flex flex-col justify-center items-center'>
+        <div className='sticky top-40 sm:top-24 h-[80vh] sm:h-[60vh] flex flex-col justify-center items-center'>
           <div className='mx-auto max-w-[1024px] w-full grid grid-cols-1 px-4 sm:px-6'>
             <div className='flex flex-col items-center text-center max-w-2xl mx-auto'>
               {sections.map((section, index) => (
