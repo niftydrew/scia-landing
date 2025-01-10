@@ -62,7 +62,7 @@ const Navbar = () => {
                 alt='X Logo'
                 width={24}
                 height={24}
-                className='opacity-60 hover:opacity-100 transition-all'
+                className='hover:opacity-80 transition-all'
               />
             </Link>
             <Link href='https://t.me/sciaofficial' className='mr-2'>
@@ -71,7 +71,7 @@ const Navbar = () => {
                 alt='Telegram Logo'
                 width={24}
                 height={24}
-                className='opacity-60 hover:opacity-100 transition-all'
+                className=' hover:opacity-80 transition-all'
               />
             </Link>
             <WaitlistButton />

@@ -14,8 +14,8 @@ export function VideoBackground() {
           className='w-full h-full object-cover opacity-20'
         >
           <source
-            src='/video/test6.mp4'
-            type='video/mp4'
+            src='/video/test3.webm'
+            type='video/webm'
           />
         </video>
         <div className='absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent via-background/60 to-background' />

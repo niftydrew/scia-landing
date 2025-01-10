@@ -69,7 +69,7 @@ export function StickyNavbar() {
               alt='X Logo'
               width={24}
               height={24}
-              className='opacity-60 hover:opacity-100 transition-all'
+              className='hover:opacity-80 transition-all'
             />
           </Link>
           <Link
@@ -81,7 +81,7 @@ export function StickyNavbar() {
               alt='Telegram Logo'
               width={24}
               height={24}
-              className='opacity-60 hover:opacity-100 transition-all'
+              className='hover:opacity-80 transition-all'
             />
           </Link>
           <WaitlistButton />
