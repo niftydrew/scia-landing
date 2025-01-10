@@ -1,7 +1,8 @@
 export function VideoBackground() {
   return (
     <>
-      {/* <div className='absolute inset-0 h-[800px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#021A0C] via-[#021A0C]/50 to-background' /> */}
+      <div className='absolute inset-0 h-[800px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#240087] via-[#6366F1]/50 to-background' />
+      <div className='absolute inset-0 h-[800px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#240087] via-[#6366F1]/70 to-background' />
 
       {/* Video Background */}
       <div className='absolute inset-0 h-[800px] overflow-hidden'>
@@ -10,10 +11,10 @@ export function VideoBackground() {
           loop
           muted
           playsInline
-          className='w-full h-full object-cover opacity-20'
+          className='w-full h-full object-cover opacity-30'
         >
           <source
-            src='/video/bg-video.mp4'
+            src='/video/test3.webm'
             type='video/mp4'
           />
         </video>

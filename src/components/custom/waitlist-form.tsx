@@ -101,7 +101,7 @@ export function WaitlistForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='flex items-center gap-2 p-1.5 rounded-xl bg-accent/10 border border-accent/10 backdrop-blur-sm w-full md:w-[400px] max-w-[500px] relative overflow-hidden focus-within:ring-2 focus-within:ring-sciaprimary focus-within:ring-offset-0 transition-all duration-200'
+        className='flex items-center gap-2 p-1.5 rounded-xl bg-background/30 border border-sciaprimary backdrop-blur-sm w-full md:w-[350px] max-w-full relative overflow-hidden focus-within:ring-2 focus-within:ring-sciaprimary focus-within:ring-offset-0 transition-all duration-200'
       >
         <FormField
           control={form.control}

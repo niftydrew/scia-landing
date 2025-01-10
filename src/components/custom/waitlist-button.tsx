@@ -28,11 +28,11 @@ export function WaitlistButton({ className }: WaitlistButtonProps) {
   return (
     <Button
       variant='default'
-      className={`bg-foreground hover:bg-foreground/80 text-black font-medium text-base tracking-tight rounded-lg flex items-center gap-1.5 px-4 md:pr-1.5 h-[40px] ${className}`}
+      className={`bg-foreground hover:bg-foreground/80 text-background font-medium text-base tracking-tight rounded-lg flex items-center gap-1.5 px-4 md:pr-1.5 h-[40px] ${className}`}
       onClick={scrollToWaitlist}
     >
       Join waitlist
-      <span className='hidden md:flex bg-black text-foreground text-xs rounded-sm w-7 h-7 items-center justify-center'>
+      <span className='hidden md:flex bg-background text-foreground text-xs rounded-sm w-7 h-7 items-center justify-center'>
         W
       </span>
     </Button>

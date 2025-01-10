@@ -54,7 +54,7 @@ export function Partners() {
         <div className='text-center mb-12'>
           <Tag size='lg'>Backed by</Tag>
         </div>
-        <div className='grid grid-cols-2 gap-8 space-x-8 sm:grid-cols-3 md:grid-cols-5 max-w-[1024px] mx-auto'>
+        <div className='grid grid-cols-2 gap-12 space-x-8 sm:grid-cols-3 md:grid-cols-5 max-w-[1024px] mx-auto'>
           {partners.map((partner) => (
             <motion.div
               key={partner.name}

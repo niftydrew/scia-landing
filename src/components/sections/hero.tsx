@@ -29,7 +29,7 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className='relative min-h-screen flex items-center justify-center'>
+    <section className='relative min-h-[80vh] pt-32 sm:min-h-screen flex items-center justify-center'>
       <motion.div
         className='flex flex-col max-w-[800px] items-center justify-center'
         variants={containerVariants}
@@ -41,13 +41,13 @@ export function Hero() {
         </motion.div>
         <motion.h1
           variants={itemVariants}
-          className='text-5xl md:text-6xl lg:text-[64px] font-normal mb-4 sm:mb-6 leading-[105%] tracking-tight text-center'
+          className='text-5xl md:text-6xl lg:text-7xl font-medium mb-4 sm:mb-6 leading-tight tracking-tight text-center'
         >
           Smart collaborative intelligent agents
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className='text-base sm:text-lg leading-[150%] tracking-tight text-foreground/60 max-w-[500px] text-center mb-8 sm:mb-12'
+          className='text-base sm:text-lg lg:text-xl leading-snug tracking-tight text-foreground/60 max-w-[500px] text-center mb-8 sm:mb-12'
         >
           Scia is a multi-agent artificial intelligence system designed for
           cryptocurrency market analysis.
