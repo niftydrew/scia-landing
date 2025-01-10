@@ -7,6 +7,7 @@ import { NavLink } from '@/components/custom/nav-link';
 import { MobileMenu } from '@/components/custom/mobile-menu';
 import { navigationItems } from '@/config/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
   const { scrollY } = useScroll();
@@ -54,7 +55,25 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Waitlist Button */}
-          <div className='hidden md:flex justify-end col-span-1'>
+          <div className='hidden md:flex items-center gap-4 justify-end col-span-1'>
+            <Link href='/x.com/scia_ai'>
+              <Image
+                src='/logos/X.svg'
+                alt='X Logo'
+                width={24}
+                height={24}
+                className='opacity-60 hover:opacity-100 transition-all'
+              />
+            </Link>
+            <Link href='https://t.me/sciaofficial' className='mr-2'>
+              <Image
+                src='/logos/telegram.svg'
+                alt='Telegram Logo'
+                width={24}
+                height={24}
+                className='opacity-60 hover:opacity-100 transition-all'
+              />
+            </Link>
             <WaitlistButton />
           </div>
 
