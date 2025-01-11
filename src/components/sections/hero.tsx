@@ -43,7 +43,7 @@ export function Hero() {
           variants={itemVariants}
           className='text-5xl md:text-6xl lg:text-7xl font-medium mb-4 sm:mb-6 leading-tight tracking-tight text-center'
         >
-          Smart collaborative intelligent agents
+          Making trading accessible with AI Agents
         </motion.h1>
         <motion.p
           variants={itemVariants}
@@ -51,7 +51,7 @@ export function Hero() {
         >
           Process vast amounts of market data, identify significant
           patterns and trends, and analyze market sentiment across multiple
-          sources in seconds rather than hours.
+          sources autonomously.
         </motion.p>
         <motion.div variants={itemVariants}>
           <WaitlistForm />
