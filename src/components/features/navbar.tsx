@@ -21,7 +21,7 @@ const Navbar = () => {
         opacity,
         y: translateY,
       }}
-      className='fixed top-0 left-0 right-0 z-50'
+      className='fixed top-0 left-0 right-0 z-10'
     >
       <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%] h-[60px] mt-4 rounded-2xl bg-background/60 backdrop-blur-2xl border border-background/10'>
         <div className='grid grid-cols-2 md:grid-cols-4 items-center justify-between h-full pl-4 pr-2'>

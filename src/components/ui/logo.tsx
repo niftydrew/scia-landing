@@ -3,11 +3,11 @@ import Image from 'next/image';
 export function Logo() {
   return (
     <Image
-      src='/brand/logo.svg'
+      src='/brand/scia.png'
       alt='Scia Logo'
-      width={70}
-      height={36}
-      className='h-9 w-auto'
+      width={300}
+      height={60}
+      className='h-8 w-auto'
     />
   );
 }
