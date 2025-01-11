@@ -41,13 +41,13 @@ export function Hero() {
         </motion.div>
         <motion.h1
           variants={itemVariants}
-          className='text-5xl md:text-6xl lg:text-7xl font-medium mb-4 sm:mb-6 leading-tight tracking-tight text-center'
+          className='text-5xl md:text-6xl font-medium mb-4 sm:mb-6 leading-tight tracking-tight text-center'
         >
-          Making trading accessible with AI Agents
+          Making trading accessible with autonomous agents
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className='text-base sm:text-lg lg:text-xl leading-snug tracking-tight text-foreground/70 max-w-[500px] text-center mb-8 sm:mb-12'
+          className='text-base sm:text-lg lg:text-xl/8 tracking-tight text-foreground/70 max-w-[500px] text-center mb-8 sm:mb-12'
         >
           Process vast amounts of market data, identify significant
           patterns and trends, and analyze market sentiment across multiple
