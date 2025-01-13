@@ -24,7 +24,7 @@ const Navbar = () => {
       className='fixed top-0 left-0 right-0 z-10'
     >
       <div className='mx-auto max-w-[1024px] w-[95%] sm:w-[90%] h-[60px] mt-4 rounded-2xl bg-background/60 backdrop-blur-2xl border border-background/10'>
-        <div className='grid grid-cols-2 md:grid-cols-4 items-center justify-between h-full pl-4 pr-2'>
+        <div className='grid grid-cols-2 md:grid-cols-3 items-center justify-between h-full pl-4 pr-2'>
           {/* Logo */}
           <div className='flex-shrink-0 col-span-1'>
             <Link
@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className='hidden md:flex items-center justify-center col-span-2'>
+          <div className='hidden md:flex items-center justify-center col-span-1'>
             {navigationItems.map((item) => (
               <NavLink
                 key={item.href}
