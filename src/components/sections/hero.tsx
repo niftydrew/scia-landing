@@ -29,7 +29,7 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className='relative min-h-[80vh] pt-32 sm:min-h-screen flex items-center justify-center'>
+    <section className='relative min-h-[80vh] px-4 pt-32 sm:min-h-screen flex items-center justify-center'>
       <motion.div
         className='flex flex-col max-w-[800px] items-center justify-center'
         variants={containerVariants}
@@ -41,7 +41,7 @@ export function Hero() {
         </motion.div>
         <motion.h1
           variants={itemVariants}
-          className='text-5xl md:text-6xl font-medium mb-4 sm:mb-6 leading-tight tracking-tight text-center'
+          className='text-4xl md:text-6xl font-medium mb-4 sm:mb-6 leading-tight tracking-tight text-center'
         >
           Making trading accessible with autonomous agents
         </motion.h1>

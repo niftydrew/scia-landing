@@ -4,6 +4,7 @@ import '@/styles/globals.css';
 import Navbar from '@/components/features/navbar';
 import { VideoBackground } from '@/components/features/video-background';
 import { StickyNavbar } from '@/components/features/sticky-navbar';
+import Footer from '@/components/features/footer';
 
 import { Toaster } from '@/components/ui/toaster';
 
@@ -58,6 +59,7 @@ export default function RootLayout({
         <StickyNavbar />
         <Navbar />
         <main className='relative'>{children}</main>
+        <Footer />
         <Toaster />
       </body>
     </html>

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Tag } from '@/components/ui/tag';
+
 import Image from 'next/image';
 import { useRef } from 'react';
 
@@ -104,7 +104,7 @@ export function About() {
                   }}
                 >
                   <motion.h2 className='text-base/7 font-normal text-accent tracking-tight'>
-                    <Tag size='lg'>{section.tag}</Tag>
+                    
                   </motion.h2>
                   <motion.p className='mt-6 text-4xl font-medium tracking-tight text-foreground sm:text-5xl px-4 sm:px-0'>
                     {section.title}

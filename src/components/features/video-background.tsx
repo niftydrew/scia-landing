@@ -11,7 +11,7 @@ export function VideoBackground() {
           loop
           muted
           playsInline
-          className='w-full h-full object-cover opacity-30'
+          className='w-full h-full object-cover opacity-20'
         >
           <source
             src='/video/herobg_optimized.webm'

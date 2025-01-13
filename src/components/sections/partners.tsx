@@ -25,26 +25,6 @@ const partners = [
     name: 'Solana',
     logo: '/logos/solana.png',
   },
-  {
-    name: 'Coinbase',
-    logo: '/logos/coinbase.png',
-  },
-  {
-    name: 'Gate',
-    logo: '/logos/gate.png',
-  },
-  {
-    name: 'OKX',
-    logo: '/logos/okx.png',
-  },
-  {
-    name: 'Pionex',
-    logo: '/logos/pionex.png',
-  },
-  {
-    name: 'Bitstamp',
-    logo: '/logos/bitstamp.png',
-  },
 ];
 
 export function Partners() {
@@ -52,7 +32,7 @@ export function Partners() {
     <section className='py-20'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6'>
         <div className='text-center mb-12'>
-          <Tag size='lg'>Backed by</Tag>
+          <Tag size='lg'>Partners and Integrations</Tag>
         </div>
         <div className='grid grid-cols-2 gap-12 space-x-8 sm:grid-cols-3 md:grid-cols-5 max-w-[1024px] mx-auto'>
           {partners.map((partner) => (

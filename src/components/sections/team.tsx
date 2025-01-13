@@ -1,6 +1,5 @@
 'use client';
 
-import { Tag } from '../ui/tag';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -197,7 +196,7 @@ export function Team() {
         <div className='sticky top-0 h-[40vh] mb-36 sm-mb-0 sm:h-[60vh] flex items-center justify-center'>
           <div className='w-full max-w-7xl mx-auto px-4 sm:px-6'>
             <div className='text-center mb-12'>
-              <Tag size='lg'>Meet The Team</Tag>
+             
               <p className='mt-6 text-4xl font-medium tracking-tight text-foreground sm:text-5xl'>
                 Our AI Dream Team
               </p>
@@ -230,10 +229,10 @@ export function Team() {
                         {/* Content Overlay */}
                         <div className='absolute inset-0 flex flex-col justify-end p-6'>
                           <div className='text-left'>
-                            <h3 className='text-2xl font-medium text-white'>
+                            <h3 className='text-5xl font-medium text-foreground/50 tracking-tight'>
                               {agent.name}
                             </h3>
-                            <p className='text-accent mt-1'>{agent.role}</p>
+                            <p className='text-foreground/50 mt-1'>{agent.role}</p>
                             <div className='mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3'>
                               {agent.responsibilities.map(
                                 (responsibility, idx) => (
