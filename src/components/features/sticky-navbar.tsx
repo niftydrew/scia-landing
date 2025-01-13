@@ -63,7 +63,7 @@ export function StickyNavbar() {
         {/* Desktop Waitlist Button */}
         {/* Desktop Waitlist Button */}
         <div className='hidden md:flex items-center gap-4 justify-end col-span-1'>
-          <Link href='/x.com/scia_ai'>
+          <Link href='https://x.com/scia_ai'>
             <Image
               src='/logos/X.svg'
               alt='X Logo'
