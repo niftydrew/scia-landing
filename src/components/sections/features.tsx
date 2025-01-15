@@ -81,7 +81,7 @@ const FeatureCard = ({
             <p className='text-lg font-medium tracking-tight text-foreground'>
               {title}
             </p>
-            <p className='mt-2 max-w-lg text-sm/6 text-foreground/60'>
+            <p className='mt-2 max-w-lg text-foreground/60'>
               {description}
             </p>
           </div>
@@ -136,7 +136,7 @@ const features = [
   {
     title: 'Security & Reliability',
     description:
-      'Enterprise-grade security, advanced encryption, and 24/7 system monitoring, ensuring the highest level of reliability.',
+      'Enterprise-grade security, advanced encryption, and 24/7 system monitoring.',
     imageURL: `/illustrations/security.png`,
     className: 'max-md:rounded-b-[2rem] md:rounded-br-[2rem]',
     colSpan: 'sm:col-span-1 lg:col-span-2',

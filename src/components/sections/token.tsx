@@ -18,7 +18,7 @@ const UtilityCard = ({ title, description, icon }: UtilityCardProps) => (
 
     <div className='p-3 rounded-full bg-accent/10'>{icon}</div>
     <h3 className='mt-4 text-lg font-medium'>{title}</h3>
-    <p className='mt-2 text-sm text-foreground/60'>{description}</p>
+    <p className='mt-2 text-foreground/60'>{description}</p>
   </div>
 );
 
