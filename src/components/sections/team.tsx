@@ -212,7 +212,7 @@ export function Team() {
                       style={{ opacity: progressArray[agentIndex] }}
                     >
                       {/* Glow Effect */}
-                      <div className='absolute -inset-20 rounded-[3rem] bg-gradient-to-r from-sciaprimary/30 via-sciaprimary/20 to-sciaprimary/30 blur-[64px] -z-10 hidden sm:block' />
+                      <div className='absolute inset-0 rounded-[3rem] bg-gradient-to-r from-sciaprimary/30 via-sciaprimary/20 to-sciaprimary/30 blur-[64px] -z-10 hidden sm:block' />
 
                       <div className='relative aspect-[3/4] sm:aspect-video rounded-2xl overflow-hidden'>
                         <Image

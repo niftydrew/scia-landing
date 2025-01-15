@@ -54,7 +54,7 @@ export default function RootLayout({
       className={circular.className}
       suppressHydrationWarning
     >
-      <body className='relative bg-background text-foreground'>
+      <body className='relative bg-background text-foreground overflow-x-hidden'>
         <VideoBackground />
         <StickyNavbar />
         <Navbar />

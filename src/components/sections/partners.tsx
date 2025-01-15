@@ -6,24 +6,24 @@ import { Tag } from '../ui/tag';
 
 const partners = [
   {
-    name: 'Ape Terminal',
-    logo: '/logos/apeterminal.png',
+    name: 'Chain GPT',
+    logo: '/logos/chaingpt.png',
   },
   {
     name: 'Sui',
-    logo: '/logos/sui.png',
+    logo: '/logos/suichain.png',
   },
   {
-    name: 'Stacks',
-    logo: '/logos/stacks.png',
+    name: 'BNB Chain',
+    logo: '/logos/bnb.png',
   },
   {
-    name: 'Near',
-    logo: '/logos/near.png',
+    name: 'Zephyrus Capital',
+    logo: '/logos/zephyrus.png',
   },
   {
-    name: 'Solana',
-    logo: '/logos/solana.png',
+    name: 'Suipad',
+    logo: '/logos/suipad.png',
   },
 ];
 
@@ -34,7 +34,7 @@ export function Partners() {
         <div className='text-center mb-12'>
           <Tag size='lg'>Partners and Integrations</Tag>
         </div>
-        <div className='grid grid-cols-2 gap-12 space-x-8 sm:grid-cols-3 md:grid-cols-5 max-w-[1024px] mx-auto'>
+        <div className='grid grid-cols-2 gap-12 space-x-4 sm:grid-cols-3 md:grid-cols-5 max-w-[1024px] mx-auto'>
           {partners.map((partner) => (
             <motion.div
               key={partner.name}

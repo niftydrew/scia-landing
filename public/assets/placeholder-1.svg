@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="450" fill="#1A1A1A"/>
-  <circle cx="400" cy="225" r="150" fill="#333333"/>
-  <text x="400" y="235" text-anchor="middle" fill="#666666" font-family="Arial" font-size="24">AI Agent 1</text>
-</svg>

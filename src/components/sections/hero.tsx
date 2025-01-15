@@ -49,9 +49,8 @@ export function Hero() {
           variants={itemVariants}
           className='text-base sm:text-lg lg:text-xl/8 tracking-tight text-foreground/70 max-w-[500px] text-center mb-8 sm:mb-12'
         >
-          Process vast amounts of market data, identify significant
-          patterns and trends, and analyze market sentiment across multiple
-          sources autonomously.
+          A suite of AI agents that simplify the financial market, providing
+          strategies to execute well optimized trades that maximize liquidity.
         </motion.p>
         <motion.div variants={itemVariants}>
           <WaitlistForm />

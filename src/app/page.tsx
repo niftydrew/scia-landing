@@ -6,6 +6,7 @@ import { Team } from '@/components/sections/team';
 import { Features } from '@/components/sections/features';
 // import { UseCases } from '@/components/sections/use-cases';
 import { Partners } from '@/components/sections/partners';
+import TokenSection from '@/components/sections/token';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <About />
       <Team />
       <Features />
+      <TokenSection />
       {/* <UseCases /> */}
     </>
   );
