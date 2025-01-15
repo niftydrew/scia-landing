@@ -6,7 +6,7 @@ import { navigationItems, socialItems } from '@/config/navigation';
 import Image from 'next/image';
 
 const Footer = () => {
-  const currentYear = new Date('2025-01-13').getFullYear();
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className='w-full bg-accent/5 backdrop-blur-2xl border-t border-accent/10 mt-20'>
@@ -14,7 +14,9 @@ const Footer = () => {
         <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
           {/* Logo and Description */}
           <div className='col-span-1 md:col-span-2'>
-            <Logo />
+            <div aria-label="SCIA Logo">
+              <Logo />
+            </div>
             <p className='mt-4 text-foreground/50 text-sm max-w-[300px]'>
               Stay on top of the market, make informed trading decisions, and
               take your trading to the next level with SCIA.

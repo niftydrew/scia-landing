@@ -34,8 +34,9 @@ const circular = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Scia',
-  description: 'Smart Crypto Intelligent Agents',
+  title: 'Scia | Smart Collaborative Intelligent Agents',
+  description:
+    'A multi-agent artificial intelligence system designed for cryptocurrency market analysis.',
 };
 
 export const viewport: Viewport = {
