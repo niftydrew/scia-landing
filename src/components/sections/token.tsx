@@ -13,7 +13,7 @@ interface UtilityCardProps {
 }
 
 const UtilityCard = ({ title, description, icon }: UtilityCardProps) => (
-  <div className='flex flex-col items-start px-8 pt-16 pb-8 rounded-2xl bg-accent/10 ring-1 ring-accent/10'>
+  <div className='flex flex-col items-start px-8 pt-16 pb-8 rounded-2xl bg-accent/10 ring-1 ring-accent/20  shadow-[inset_0_0_30px_rgba(165,180,252,0.1)]'>
     <div className='absolute inset-0 rounded-[3rem] bg-gradient-to-r from-sciaprimary/30 via-sciaprimary/20 to-sciaprimary/30 sm:blur-[64px] -z-10 hidden sm:block opacity-45' />
 
     <div className='p-3 rounded-full bg-accent/10'>{icon}</div>
