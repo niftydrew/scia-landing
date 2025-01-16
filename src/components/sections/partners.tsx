@@ -5,10 +5,7 @@ import Image from 'next/image';
 import { Tag } from '../ui/tag';
 
 const partners = [
-  {
-    name: 'Chain GPT',
-    logo: '/logos/chaingpt.png',
-  },
+ 
   {
     name: 'Sui',
     logo: '/logos/suichain.png',
@@ -21,10 +18,7 @@ const partners = [
     name: 'Zephyrus Capital',
     logo: '/logos/zephyrus.png',
   },
-  {
-    name: 'Suipad',
-    logo: '/logos/suipad.png',
-  },
+  
 ];
 
 export function Partners() {
@@ -34,7 +28,7 @@ export function Partners() {
         <div className='text-center mb-12'>
           <Tag size='lg'>Partners and Integrations</Tag>
         </div>
-        <div className='grid grid-cols-2 gap-12 space-x-4 sm:grid-cols-3 md:grid-cols-5 max-w-[1024px] mx-auto'>
+        <div className='grid grid-cols-2 gap-28 sm:grid-cols-3 md:grid-cols-3 max-w-[800px] mx-auto'>
           {partners.map((partner) => (
             <motion.div
               key={partner.name}

@@ -8,37 +8,37 @@ import { useRef } from 'react';
 const sections = [
   {
     tag: 'Our Story',
-    title: 'The challenge',
+    title: 'Challenges',
     content:
-      'In the complex world of cryptocurrency trading, investors face an overwhelming flood of data from countless sources. Traders struggle to process market movements while battling their own emotions and biases, leading to suboptimal trading decisions.',
+      'Majority of traders face an overwhelming flood of data from countless sources. The challenge lies in sifting through the noise, managing emotional biases, and streamlining relevant information to make optimal decisions.',
     image: '/illustrations/challenge.png',
   },
   {
     tag: 'Vision',
-    title: 'Our vision',
+    title: 'Vision',
     content:
       'We envision a future where AI transforms the trading landscape by empowering traders with clear, actionable insights. Our goal is to bridge the gap between complex market data and strategic decision-making, making successful trading accessible to all.',
     image: '/illustrations/vision.png',
   },
   {
     tag: 'Solution',
-    title: 'The solution',
+    title: 'Solution',
     content:
-      'Enter SCIA—an innovative AI-powered trading companion that combines advanced machine learning with emotional intelligence. Our system processes vast market data while understanding and counteracting common behavioral biases in trading.',
+      'Chat with SCIA—an innovative AI-powered trading companion that combines advanced machine learning with emotional intelligence. Our system processes vast market data while understanding and counteracting common behavioral biases in trading.',
     image: '/illustrations/solution.png',
   },
   {
     tag: 'Innovation',
-    title: 'Our approach',
+    title: 'Approach',
     content:
-      'By leveraging state-of-the-art AI technology, we analyze complex market patterns, sentiment data, and trading behaviors in real-time. This comprehensive analysis provides traders with clear, actionable insights for better decision-making.',
+      'By leveraging state-of-the-art AI technology, we analyze complex market patterns, sentiment data, and trading behaviors in real-time. This in-depth analysis provides traders with clear, actionable insights for better decision-making.',
     image: '/illustrations/approach.png',
   },
   {
     tag: 'Impact',
-    title: 'The future',
+    title: 'Impact',
     content:
-      'Our mission is to democratize successful trading by making professional-grade AI tools accessible to traders of all levels. Through SCIA, we are building a future where technology and human insight combine to create better trading outcomes.',
+      'Our mission is to make efficient trading accessible to traders of all levels through AI-powered solution stack. With SCIA, we are building the future of trading where technology and human insight combine to create optimal trading outcomes.',
     image: '/illustrations/future.png',
   },
 ];

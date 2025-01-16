@@ -43,14 +43,14 @@ export function Hero() {
           variants={itemVariants}
           className='text-4xl md:text-6xl font-medium mb-4 sm:mb-6 leading-tight tracking-tight text-center'
         >
-          Making trading accessible with autonomous agents
+          The AI-Powered Collective Intelligence for Optimized Trading
         </motion.h1>
         <motion.p
           variants={itemVariants}
           className='text-base sm:text-lg lg:text-xl/8 tracking-tight text-foreground/70 max-w-[500px] text-center mb-8 sm:mb-12'
         >
-          A suite of AI agents that simplify the financial market, providing
-          strategies to execute well optimized trades that maximize liquidity.
+          A swarm of AI agents empowering traders of all levels with simplified
+          data, tailored strategies, and precise trade execution.
         </motion.p>
         <motion.div variants={itemVariants}>
           <WaitlistForm />

@@ -104,7 +104,7 @@ const features = [
   {
     title: 'Specialized Agents Network',
     description:
-      'AI agents trained on specific facets of trading to work in harmony, delivering precise, well-optimized, and verified trading insights autonomously.',
+      'AI agents trained on specific facets of trading to work in harmony, delivering precise, well-optimized, and verified market and trading insights autonomously.',
     imageURL: `/illustrations/agents.png`,
     className:
       'max-lg:rounded-t-[2rem] lg:rounded-tr-[2rem] lg:rounded-tl-[2rem] w-full',
