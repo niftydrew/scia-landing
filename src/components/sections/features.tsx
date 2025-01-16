@@ -41,7 +41,7 @@ const FeatureCard = ({
     whileInView='visible'
     viewport={{ once: true }}
     transition={{ delay }}
-    className={`${colSpan} h-[400px]`}
+    className={`${colSpan} h-[480px]`}
   >
     <div
       className={`flex ${
@@ -68,9 +68,9 @@ const FeatureCard = ({
       <div
         className={`${
           colSpan?.includes('col-span-6') ? 'md:w-2/6' : 'w-full'
-        } p-6 flex flex-col justify-end h-full`}
+        } p-6 flex flex-col  h-full`}
       >
-        <div className='flex flex-col items-start gap-6'>
+        <div className='flex flex-col items-start justify-between gap-6 h-full'>
           {metric && (
             <p className='text-8xl font-medium tracking-tight text-accent/60'>
               {metric}
@@ -81,9 +81,7 @@ const FeatureCard = ({
             <p className='text-lg font-medium tracking-tight text-foreground'>
               {title}
             </p>
-            <p className='mt-2 max-w-lg text-foreground/60'>
-              {description}
-            </p>
+            <p className='mt-2 max-w-lg text-foreground/60'>{description}</p>
           </div>
           <a
             href={href}
@@ -134,9 +132,9 @@ const features = [
     href: 'https://scia.gitbook.io/litepaper/technical-details#real-time-processing',
   },
   {
-    title: 'Security & Reliability',
+    title: 'Interoperable Communication',
     description:
-      'Enterprise-grade security, advanced encryption, and 24/7 system monitoring.',
+      'Leverage SCIA’s API to access a rich stream of information layers that seamlessly integrate into other data-dependent ecosystems.',
     imageURL: `/illustrations/security.png`,
     className: 'max-md:rounded-b-[2rem] md:rounded-br-[2rem]',
     colSpan: 'sm:col-span-1 lg:col-span-2',
