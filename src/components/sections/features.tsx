@@ -109,7 +109,8 @@ const features = [
     colSpan: 'sm:col-span-2 lg:col-span-6',
     delay: 0,
     metric: '10',
-    href: 'https://scia.gitbook.io/litepaper/ai-agents',
+    // href: 'https://scia.gitbook.io/litepaper/ai-agents',
+    href: 'https://scia.ai/docs',
   },
   {
     title: 'Advanced Machine Learning',
@@ -119,7 +120,8 @@ const features = [
     className: 'lg:rounded-bl-[2rem]',
     colSpan: 'sm:col-span-1 lg:col-span-2',
     delay: 0.4,
-    href: 'https://scia.gitbook.io/litepaper/technical-details#advanced-machine-learning',
+    // href: 'https://scia.gitbook.io/litepaper/technical-details#advanced-machine-learning',
+    href: 'https://scia.ai/docs',
   },
   {
     title: 'Real-Time Processing',
@@ -129,7 +131,8 @@ const features = [
     className: 'md:rounded-bl-[2rem] lg:rounded-bl-lg',
     colSpan: 'sm:col-span-1 lg:col-span-2',
     delay: 0.6,
-    href: 'https://scia.gitbook.io/litepaper/technical-details#real-time-processing',
+    // href: 'https://scia.gitbook.io/litepaper/technical-details#real-time-processing',
+    href: 'https://scia.ai/docs',
   },
   {
     title: 'Interoperable Communication',
@@ -139,7 +142,8 @@ const features = [
     className: 'max-md:rounded-b-[2rem] md:rounded-br-[2rem]',
     colSpan: 'sm:col-span-1 lg:col-span-2',
     delay: 0.8,
-    href: 'https://scia.gitbook.io/litepaper/technical-details#security-and-reliability',
+    // href: 'https://scia.gitbook.io/litepaper/technical-details#security-and-reliability',
+    href: 'https://scia.ai/docs',
   },
 ];
 
