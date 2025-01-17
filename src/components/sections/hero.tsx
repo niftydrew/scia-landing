@@ -31,7 +31,7 @@ export function Hero() {
   return (
     <section className='relative min-h-[80vh] px-4 pt-32 sm:min-h-screen flex items-center justify-center'>
       <motion.div
-        className='flex flex-col max-w-[800px] items-center justify-center'
+        className='flex flex-col max-w-[900px] items-center justify-center'
         variants={containerVariants}
         initial='hidden'
         animate='visible'
