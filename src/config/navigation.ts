@@ -2,7 +2,7 @@ export const navigationItems = [
   { href: '#about', label: 'About' },
   { href: '#features', label: 'Features' },
   {
-    href: 'https://scia.ai/docs',
+    href: 'https://scia.gitbook.io/litepaper/',
     label: 'Docs',
     isExternal: true,
   },
