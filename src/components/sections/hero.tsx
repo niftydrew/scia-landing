@@ -47,7 +47,7 @@ export function Hero() {
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className='text-base sm:text-lg lg:text-xl/8 tracking-tight text-foreground/70 max-w-[500px] text-center mb-8 sm:mb-12'
+          className='text-base sm:text-lg lg:text-xl/8 tracking-tight text-foreground/70 max-w-[600px] text-center mb-8 sm:mb-12'
         >
           A swarm of AI agents empowering traders of all levels with simplified
           data, tailored strategies, and precise trade execution.
