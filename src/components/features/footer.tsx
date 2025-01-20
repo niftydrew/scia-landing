@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
             <p className='mt-4 text-foreground/50 text-sm max-w-[300px]'>
               Stay on top of the market, make informed trading decisions, and
-              take your trading to the next level with SCIA.
+              take your trading to the next level with SCIA AI.
             </p>
           </div>
 
@@ -72,7 +72,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className='mt-12 pt-8 border-t border-background/10'>
           <p className='text-center text-sm text-foreground/50'>
-            {currentYear} SCIA. All rights reserved.
+            {currentYear} SCIA AI. All rights reserved.
           </p>
         </div>
       </div>

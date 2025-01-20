@@ -33,7 +33,7 @@ const TokenSection = () => {
     {
       title: 'Governance',
       description:
-        'Stake $SCIA to make proposals and vote on important decisions related to the development, expansion and growth of SCIA',
+        'Stake $SCIA to make proposals and vote on important decisions related to the development, expansion and growth of SCIA AI.',
       icon: <PiArchiveDuotone className='w-6 h-6 text-accent' />,
     },
     {
@@ -54,7 +54,7 @@ const TokenSection = () => {
             $SCIA Token
           </h2>
           <p className='mt-4 text-lg/8 text-foreground/60'>
-            The Scia ecosystem is powered by the $SCIA token, a decentralized
+            The SCIA AI ecosystem is powered by the $SCIA token, a decentralized
             and community-driven token that serves as the backbone of our
             infrastructure, community, and governance.
           </p>
@@ -104,7 +104,7 @@ const TokenSection = () => {
 
             {/* SCIA Coin */}
             <motion.div
-              className='relative mt-16 w-[30rem] h-[30rem] z-40'
+              className='relative mt-12 w-[25rem] h-[25rem] z-40'
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             >

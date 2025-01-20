@@ -7,7 +7,7 @@ export function Logo() {
       alt='Scia Logo'
       width={300}
       height={60}
-      className='h-8 w-auto'
+      className='h-6 w-auto'
     />
   );
 }

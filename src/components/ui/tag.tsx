@@ -23,7 +23,7 @@ interface TagProps extends VariantProps<typeof tagVariants> {
 export function Tag({ children, size, className = "" }: TagProps) {
   return (
     <div className={tagVariants({ size, className })}>
-      <span className="text-accent">{children}</span>
+      <span className="text-foreground">{children}</span>
     </div>
   );
 }

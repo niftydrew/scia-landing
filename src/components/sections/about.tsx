@@ -24,7 +24,7 @@ const sections = [
     tag: 'Solution',
     title: 'Solution',
     content:
-      'Chat with SCIA—an innovative AI-powered trading companion that combines advanced machine learning with emotional intelligence. Our system processes vast market data while understanding and counteracting common behavioral biases in trading.',
+      'Chat with SCIA AI—an innovative AI-powered trading companion that combines advanced machine learning with emotional intelligence. Our system processes vast market data while understanding and counteracting common behavioral biases in trading.',
     image: '/illustrations/solution.png',
   },
   {
@@ -38,7 +38,7 @@ const sections = [
     tag: 'Impact',
     title: 'Impact',
     content:
-      'Our mission is to make efficient trading accessible to traders of all levels through AI-powered solution stack. With SCIA, we are building the future of trading where technology and human insight combine to create optimal trading outcomes.',
+      'Our mission is to make efficient trading accessible to traders of all levels through AI-powered solution stack. With SCIA AI, we are building the future of trading where technology and human insight combine to create optimal trading outcomes.',
     image: '/illustrations/future.png',
   },
 ];

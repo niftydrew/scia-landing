@@ -137,7 +137,7 @@ const features = [
   {
     title: 'Interoperable Communication',
     description:
-      'Leverage SCIA’s API to access a rich stream of information layers that seamlessly integrate into other data-dependent ecosystems.',
+      'Leverage SCIA AI’s API to access a rich stream of information layers that seamlessly integrate into other data-dependent ecosystems.',
     imageURL: `/illustrations/security.png`,
     className: 'max-md:rounded-b-[2rem] md:rounded-br-[2rem]',
     colSpan: 'sm:col-span-1 lg:col-span-2',
