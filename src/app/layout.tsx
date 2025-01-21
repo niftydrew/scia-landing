@@ -37,6 +37,25 @@ export const metadata: Metadata = {
   title: 'Scia | Smart Collaborative Intelligent Agents',
   description:
     'A multi-agent artificial intelligence system designed for cryptocurrency market analysis.',
+  openGraph: {
+    title: 'Scia | Smart Collaborative Intelligent Agents',
+    description: 'A multi-agent artificial intelligence system designed for cryptocurrency market analysis.',
+    images: [
+      {
+        url: '/brand/thumbnail.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Scia - Smart Collaborative Intelligent Agents',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Scia | Smart Collaborative Intelligent Agents',
+    description: 'A multi-agent artificial intelligence system designed for cryptocurrency market analysis.',
+    images: ['/brand/thumbnail.jpg'],
+  },
 };
 
 export const viewport: Viewport = {
