@@ -37,6 +37,11 @@ export const metadata: Metadata = {
   title: 'Scia | Smart Collaborative Intelligent Agents',
   description:
     'A multi-agent artificial intelligence system designed for cryptocurrency market analysis.',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/apple-touch-icon.png',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'Scia | Smart Collaborative Intelligent Agents',
     description: 'A multi-agent artificial intelligence system designed for cryptocurrency market analysis.',
