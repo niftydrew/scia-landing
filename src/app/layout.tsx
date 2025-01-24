@@ -5,6 +5,7 @@ import Navbar from '@/components/features/navbar';
 import { VideoBackground } from '@/components/features/video-background';
 import { StickyNavbar } from '@/components/features/sticky-navbar';
 import Footer from '@/components/features/footer';
+import { Analytics } from '@vercel/analytics/react';
 
 import { Toaster } from '@/components/ui/toaster';
 
@@ -44,7 +45,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Scia | Smart Collaborative Intelligent Agents',
-    description: 'A multi-agent artificial intelligence system designed for cryptocurrency market analysis.',
+    description:
+      'A multi-agent artificial intelligence system designed for cryptocurrency market analysis.',
     images: [
       {
         url: '/brand/thumbnail.jpg',
@@ -58,7 +60,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Scia | Smart Collaborative Intelligent Agents',
-    description: 'A multi-agent artificial intelligence system designed for cryptocurrency market analysis.',
+    description:
+      'A multi-agent artificial intelligence system designed for cryptocurrency market analysis.',
     images: ['/brand/thumbnail.jpg'],
   },
 };
@@ -83,7 +86,10 @@ export default function RootLayout({
         <VideoBackground />
         <StickyNavbar />
         <Navbar />
-        <main className='relative'>{children}</main>
+        <main className='relative'>
+          {children}
+          <Analytics />
+        </main>
         <Footer />
         <Toaster />
       </body>
