@@ -6,6 +6,7 @@ import { VideoBackground } from '@/components/features/video-background';
 import { StickyNavbar } from '@/components/features/sticky-navbar';
 import Footer from '@/components/features/footer';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { Toaster } from '@/components/ui/toaster';
 
@@ -89,6 +90,7 @@ export default function RootLayout({
         <main className='relative'>
           {children}
           <Analytics />
+          <SpeedInsights />
         </main>
         <Footer />
         <Toaster />
