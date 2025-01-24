@@ -6,8 +6,8 @@ import { Tag } from '../ui/tag';
 
 const partners = [
   {
-    name: 'BNB Chain',
-    logo: '/logos/bnb.png',
+    name: 'Solana',
+    logo: '/logos/solana.png',
   },
   {
     name: 'Sui',
