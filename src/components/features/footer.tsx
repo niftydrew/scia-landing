@@ -25,7 +25,7 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div className='col-span-1'>
-            <h3 className='font-semibold mb-4'>Links</h3>
+            <h3 className='font-semibold mb-4'>Information</h3>
             <ul className='space-y-2'>
               {navigationItems.map((item) => (
                 <li key={item.href}>
