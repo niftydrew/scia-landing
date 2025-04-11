@@ -1,8 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SCIA - AI-Powered Collective Intelligence for Trading
+
+SCIA is a cutting-edge platform that leverages artificial intelligence to provide collective intelligence for optimized trading. Our platform empowers traders of all levels with simplified data analysis, tailored strategies, and precise trade execution.
+
+## Project Overview
+
+SCIA helps traders overcome the challenges of information overload and emotional biases by providing a sophisticated AI-powered trading companion. The system processes vast amounts of market data and provides clear, actionable insights to support better decision-making.
+
+### Key Features
+
+- **AI-Powered Analysis**: Advanced algorithms process complex market patterns and sentiment data in real-time
+- **Emotional Intelligence**: The system understands and counterbalances common behavioral biases in trading
+- **Personalized Strategies**: Tailored trading approaches based on individual goals and risk tolerance
+- **Simplified Data Visualization**: Complex market data presented in intuitive, actionable formats
+- **Community Integration**: Leverage the power of collective intelligence in your trading decisions
+
+## Tech Stack
+
+This landing page is built with:
+
+- [Next.js](https://nextjs.org/) - React framework for production-grade applications
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Framer Motion](https://www.framer.com/motion/) - Animation library for React
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository to your local machine.
+
+Then, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +51,30 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the landing page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/src/app` - Next.js app router pages
+- `/src/components` - Reusable React components
+  - `/sections` - Main page sections (Hero, About, Features, etc.)
+  - `/custom` - Custom UI components
+- `/public` - Static assets (images, illustrations, etc.)
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The site can be easily deployed on [Vercel](https://vercel.com/) or any other Next.js-compatible hosting platform.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+# or
+bun build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](https://choosealicense.com/licenses/mit/)
